@@ -11,7 +11,8 @@ from .config import settings
 log = logging.getLogger(__name__)
 
 _MODELS = [
-    "google/gemini-2.0-flash-exp:free",
+    "google/gemini-2.5-flash:free",
+    "google/gemini-2.0-flash-001",
     "meta-llama/llama-3.3-70b-instruct:free",
 ]
 
