@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Daily Brief — {{ date }}</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <a href="../" class="back">&larr; Archive</a>
+    <h1>AI Daily Brief</h1>
+    <p class="date">{{ date }}</p>
+  </header>
+
+  {% for section in sections %}
+  <section>
+    <h2>{{ section.title }}</h2>
+    <ul>
+    {% for item in section.entries %}
+      <li>
+        <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+        <span class="source">{{ item.source }}</span>
+        {% if item.one_line %}
+        <p class="summary">{{ item.one_line }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+
+  <footer>
+    <p>Curated by AI, reviewed by human. Sources: Hacker News, Reddit, Google News, GitHub, Dev.to.</p>
+  </footer>
+</div>
+</body>
+</html>

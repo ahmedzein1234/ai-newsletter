@@ -1,0 +1,38 @@
+name: Daily AI Newsletter
+
+on:
+  schedule:
+    - cron: '0 1 * * *'  # 1 AM UTC = 5 AM UAE
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  newsletter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run newsletter pipeline
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NEWSLETTER_TO: ${{ secrets.NEWSLETTER_TO }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m src
+
+      - name: Commit updated data and site
+        run: |
+          git config user.name "newsletter-bot"
+          git config user.email "bot@pulsetrade.io"
+          git add data/sent.json site/
+          git diff --cached --quiet || git commit -m "newsletter: $(date -u +%Y-%m-%d)"
+          git push

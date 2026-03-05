@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"></head>
+<body style="margin:0;padding:0;background:#f4f4f5;font-family:system-ui,-apple-system,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f5;padding:20px 0;">
+<tr><td align="center">
+<table width="600" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:8px;overflow:hidden;max-width:600px;">
+
+<!-- Header -->
+<tr><td style="background:#1e293b;padding:24px 32px;">
+  <h1 style="margin:0;color:#fff;font-size:22px;">AI Daily Brief</h1>
+  <p style="margin:4px 0 0;color:#94a3b8;font-size:14px;">{{ date }}</p>
+</td></tr>
+
+<!-- Intro -->
+<tr><td style="padding:20px 32px 8px;">
+  <p style="margin:0;color:#475569;font-size:14px;line-height:1.5;">
+    Today's curated AI news. <a href="{{ page_url }}" style="color:#2563eb;">Read full edition online &rarr;</a>
+  </p>
+</td></tr>
+
+{% for section in sections %}
+<!-- Section: {{ section.title }} -->
+<tr><td style="padding:16px 32px 4px;">
+  <h2 style="margin:0;font-size:16px;color:#1e293b;border-bottom:2px solid #2563eb;padding-bottom:6px;">
+    {{ section.title }}
+  </h2>
+</td></tr>
+{% for item in section.entries[:5] %}
+<tr><td style="padding:4px 32px;">
+  <p style="margin:0;font-size:14px;line-height:1.6;">
+    <a href="{{ item.url }}" style="color:#2563eb;text-decoration:none;font-weight:600;">{{ item.title }}</a>
+    <span style="color:#94a3b8;font-size:12px;"> — {{ item.source }}</span>
+  </p>
+  {% if item.one_line %}
+  <p style="margin:2px 0 8px;color:#64748b;font-size:13px;">{{ item.one_line }}</p>
+  {% endif %}
+</td></tr>
+{% endfor %}
+{% endfor %}
+
+<!-- Footer -->
+<tr><td style="padding:20px 32px;border-top:1px solid #e2e8f0;">
+  <p style="margin:0;color:#94a3b8;font-size:12px;text-align:center;">
+    <a href="{{ page_url }}" style="color:#2563eb;">Full edition</a> &middot;
+    Curated by AI, reviewed by human.
+  </p>
+</td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>

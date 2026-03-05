@@ -1,0 +1,21 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f8fafc;color:#1e293b;font-family:system-ui,-apple-system,sans-serif;line-height:1.6}
+.container{max-width:720px;margin:0 auto;padding:24px 16px}
+header{margin-bottom:32px}
+header h1{font-size:28px;font-weight:700}
+.date{color:#64748b;font-size:14px;margin-top:4px}
+.back{color:#2563eb;text-decoration:none;font-size:14px;display:inline-block;margin-bottom:8px}
+.back:hover{text-decoration:underline}
+section{margin-bottom:28px}
+section h2{font-size:18px;font-weight:700;color:#1e293b;border-bottom:2px solid #2563eb;padding-bottom:6px;margin-bottom:12px}
+section ul{list-style:none}
+section li{margin-bottom:14px}
+section a{color:#2563eb;text-decoration:none;font-weight:600;font-size:15px}
+section a:hover{text-decoration:underline}
+.source{color:#94a3b8;font-size:12px;margin-left:6px}
+.summary{color:#64748b;font-size:13px;margin-top:2px}
+footer{border-top:1px solid #e2e8f0;padding-top:16px;margin-top:32px;color:#94a3b8;font-size:12px}
+.archive-list{list-style:none}
+.archive-list li{margin-bottom:8px}
+.archive-list a{color:#2563eb;text-decoration:none;font-size:16px;font-weight:500}
+.archive-list a:hover{text-decoration:underline}
