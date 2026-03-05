@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     resend_api_key: str = ""
     newsletter_to: str = ""
     newsletter_from: str = "newsletter@pulsetrade.io"
-    site_url: str = "https://ai-newsletter.pages.dev"
+    site_url: str = "https://ai-newsletter-8u7.pages.dev"
     github_token: str = ""
     data_dir: str = "data"
     site_dir: str = "site"
