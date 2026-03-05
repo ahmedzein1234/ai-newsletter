@@ -29,13 +29,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -m src
 
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: 30889833b758289ed11d528faad9b6fb
-          command: pages deploy site --project-name ai-newsletter --branch master --commit-dirty=true
-
       - name: Commit updated data and site
         run: |
           git config user.name "newsletter-bot"
