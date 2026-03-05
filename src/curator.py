@@ -11,7 +11,6 @@ from .config import settings
 log = logging.getLogger(__name__)
 
 _MODELS = [
-    "google/gemini-2.5-flash:free",
     "google/gemini-2.0-flash-001",
     "meta-llama/llama-3.3-70b-instruct:free",
 ]
@@ -43,8 +42,9 @@ async def curate(articles: list[dict]) -> list[dict]:
     if not settings.openrouter_api_key:
         return _keyword_fallback(articles)
 
-    titles = [{"id": a["id"], "title": a["title"], "source": a["source"],
-               "summary": a.get("summary", "")[:200]} for a in articles]
+    # Cap at 60 articles to stay within token limits
+    capped = articles[:60]
+    titles = [{"id": a["id"], "title": a["title"], "source": a["source"]} for a in capped]
 
     prompt = f"Curate these {len(titles)} articles:\n{json.dumps(titles)}"
 
@@ -52,7 +52,7 @@ async def curate(articles: list[dict]) -> list[dict]:
         try:
             result = await _call_llm(model, prompt)
             if result:
-                return _merge(articles, result)
+                return _merge(capped, result)
         except Exception as e:
             log.warning("LLM %s failed: %s", model, e)
 
@@ -75,7 +75,7 @@ async def _call_llm(model: str, prompt: str) -> list[dict] | None:
                     {"role": "user", "content": prompt},
                 ],
                 "temperature": 0.3,
-                "max_tokens": 4000,
+                "max_tokens": 8000,
             },
             timeout=30,
         )
