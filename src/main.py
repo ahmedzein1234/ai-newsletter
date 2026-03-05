@@ -11,7 +11,7 @@ import httpx
 from .config import settings
 from .sources import ALL_FETCHERS
 from . import dedup
-from .curator import curate
+from .curator import curate, generate_analysis
 from .page_builder import build_daily_page, build_email, rebuild_archive_index
 from .email_sender import send_email
 
@@ -56,13 +56,17 @@ async def run() -> None:
         log.info("Nothing passed curation, skipping")
         return
 
+    # 3b. Generate market analysis
+    analysis = await generate_analysis(curated)
+    log.info("Analysis: %d chars", len(analysis))
+
     # 4. Build static page
-    page_path = build_daily_page(curated, today)
+    page_path = build_daily_page(curated, today, analysis=analysis)
     rebuild_archive_index()
     log.info("Page built: %s", page_path)
 
     # 5. Build and send email
-    email_html = build_email(curated, today)
+    email_html = build_email(curated, today, analysis=analysis)
     subject = f"AI Daily Brief — {today.isoformat()}"
 
     if settings.dry_run:

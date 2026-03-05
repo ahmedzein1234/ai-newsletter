@@ -14,6 +14,13 @@
     <p class="date">{{ date }}</p>
   </header>
 
+  {% if analysis %}
+  <section class="analysis">
+    <h2>Market Analysis & 24h Outlook</h2>
+    <div class="analysis-body">{{ analysis }}</div>
+  </section>
+  {% endif %}
+
   {% for section in sections %}
   <section>
     <h2>{{ section.title }}</h2>
@@ -32,7 +39,7 @@
   {% endfor %}
 
   <footer>
-    <p>Curated by AI, reviewed by human. Sources: Hacker News, Reddit, Google News, GitHub, Dev.to.</p>
+    <p>Curated by Kimi K2.5 via OpenRouter. Sources: Hacker News, Reddit, Google News, GitHub, Dev.to, CoinGecko.</p>
   </footer>
 </div>
 </body>

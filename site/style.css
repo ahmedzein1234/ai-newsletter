@@ -14,6 +14,9 @@ section a{color:#2563eb;text-decoration:none;font-weight:600;font-size:15px}
 section a:hover{text-decoration:underline}
 .source{color:#94a3b8;font-size:12px;margin-left:6px}
 .summary{color:#64748b;font-size:13px;margin-top:2px}
+.analysis{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:20px;margin-bottom:28px}
+.analysis h2{border-bottom-color:#d97706}
+.analysis-body{color:#334155;font-size:14px;line-height:1.7;white-space:pre-line}
 footer{border-top:1px solid #e2e8f0;padding-top:16px;margin-top:32px;color:#94a3b8;font-size:12px}
 .archive-list{list-style:none}
 .archive-list li{margin-bottom:8px}

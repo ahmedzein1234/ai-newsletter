@@ -15,12 +15,12 @@ def _env() -> Environment:
     return Environment(loader=FileSystemLoader(str(template_dir)), autoescape=True)
 
 
-def build_daily_page(articles: list[dict], today: date) -> str:
+def build_daily_page(articles: list[dict], today: date, analysis: str = "") -> str:
     env = _env()
     tmpl = env.get_template("page.html")
 
     sections = _group_sections(articles)
-    html = tmpl.render(date=today.isoformat(), sections=sections, site_url=settings.site_url)
+    html = tmpl.render(date=today.isoformat(), sections=sections, site_url=settings.site_url, analysis=analysis)
 
     out_dir = Path(settings.site_dir) / today.isoformat()
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -29,13 +29,13 @@ def build_daily_page(articles: list[dict], today: date) -> str:
     return str(out_path)
 
 
-def build_email(articles: list[dict], today: date) -> str:
+def build_email(articles: list[dict], today: date, analysis: str = "") -> str:
     env = _env()
     tmpl = env.get_template("email.html")
 
     sections = _group_sections(articles)
     page_url = f"{settings.site_url}/{today.isoformat()}/"
-    return tmpl.render(date=today.isoformat(), sections=sections, page_url=page_url)
+    return tmpl.render(date=today.isoformat(), sections=sections, page_url=page_url, analysis=analysis)
 
 
 def rebuild_archive_index() -> None:
@@ -68,6 +68,8 @@ _SECTION_TITLES = {
     "claude": "Claude Code & MCP",
     "tools": "AI Tools & APIs",
     "monetization": "Monetization",
+    "crypto": "Crypto Market & Sentiment",
+    "gold_quant": "Gold & Quant Trading",
     "projects": "Project-Relevant",
     "links": "Quick Links",
 }
@@ -79,7 +81,7 @@ def _group_sections(articles: list[dict]) -> list[dict]:
         sec = a.get("section", "links")
         groups.setdefault(sec, []).append(a)
 
-    order = ["claude", "tools", "monetization", "projects", "links"]
+    order = ["claude", "tools", "monetization", "crypto", "gold_quant", "projects", "links"]
     out = []
     for key in order:
         items = groups.get(key, [])

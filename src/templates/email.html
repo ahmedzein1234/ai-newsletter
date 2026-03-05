@@ -15,24 +15,36 @@
 <!-- Intro -->
 <tr><td style="padding:20px 32px 8px;">
   <p style="margin:0;color:#475569;font-size:14px;line-height:1.5;">
-    Today's curated AI news. <a href="{{ page_url }}" style="color:#2563eb;">Read full edition online &rarr;</a>
+    Today's curated AI + market news. <a href="{{ page_url }}" style="color:#2563eb;">Read full edition online &rarr;</a>
   </p>
 </td></tr>
+
+{% if analysis %}
+<!-- Market Analysis -->
+<tr><td style="padding:16px 32px 4px;">
+  <h2 style="margin:0;font-size:16px;color:#1e293b;border-bottom:2px solid #d97706;padding-bottom:6px;">
+    Market Analysis & 24h Outlook
+  </h2>
+</td></tr>
+<tr><td style="padding:8px 32px 16px;">
+  <div style="color:#334155;font-size:13px;line-height:1.7;white-space:pre-line;">{{ analysis }}</div>
+</td></tr>
+{% endif %}
 
 {% for section in sections %}
 <!-- Section: {{ section.title }} -->
 <tr><td style="padding:16px 32px 4px;">
-  <h2 style="margin:0;font-size:16px;color:#1e293b;border-bottom:2px solid #2563eb;padding-bottom:6px;">
+  <h2 style="margin:0;font-size:16px;color:#1e293b;border-bottom:2px solid {% if section.key == 'crypto' %}#f59e0b{% elif section.key == 'gold_quant' %}#d97706{% else %}#2563eb{% endif %};padding-bottom:6px;">
     {{ section.title }}
   </h2>
 </td></tr>
-{% for item in section.entries[:5] %}
+{% for item in section.entries[:8] %}
 <tr><td style="padding:4px 32px;">
   <p style="margin:0;font-size:14px;line-height:1.6;">
     <a href="{{ item.url }}" style="color:#2563eb;text-decoration:none;font-weight:600;">{{ item.title }}</a>
     <span style="color:#94a3b8;font-size:12px;"> — {{ item.source }}</span>
   </p>
-  {% if item.one_line %}
+  {% if item.one_line and item.one_line != item.title[:80] %}
   <p style="margin:2px 0 8px;color:#64748b;font-size:13px;">{{ item.one_line }}</p>
   {% endif %}
 </td></tr>
@@ -43,7 +55,7 @@
 <tr><td style="padding:20px 32px;border-top:1px solid #e2e8f0;">
   <p style="margin:0;color:#94a3b8;font-size:12px;text-align:center;">
     <a href="{{ page_url }}" style="color:#2563eb;">Full edition</a> &middot;
-    Curated by AI, reviewed by human.
+    Analysis by Kimi K2.5 &middot; Data from CoinGecko
   </p>
 </td></tr>
 
