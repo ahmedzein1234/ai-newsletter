@@ -1,0 +1,26 @@
+{
+  "date": "2026-03-06",
+  "article_count": 83,
+  "section_counts": {
+    "claude_plugins": 5,
+    "claude_news": 6,
+    "ai_tools": 3,
+    "world_news": 6,
+    "monetization": 1,
+    "crypto": 31,
+    "gold_quant": 31
+  },
+  "top_headlines": [
+    "Claude Code Context Reduction: MCP Server Slashes Consumption by 98%",
+    "Context Mode: Shrinking Claude Code MCP Output by Over 98%",
+    "BTC Guru: BULLISH (32% conf) \u2014 Regime: BREAKOUT",
+    "CodeYam Memory: Comprehensive Memory Management for Claude Code",
+    "Declarative Open-Source Framework for MCPs with Search and Execute",
+    "Bitcoin ($69,819.38) \u2014 -4.0% 24h",
+    "Ethereum ($2,042.37) \u2014 -4.1% 24h",
+    "BNB ($636.49) \u2014 -3.0% 24h",
+    "Cardano ($0.27) \u2014 -3.5% 24h",
+    "XRP ($1.39) \u2014 -3.4% 24h"
+  ],
+  "analysis_summary": "**Crypto Market: Sentiment & 24h Outlook** BTC is at **$69,832 (-4.0%)**, ETH **$2,042.53 (-4.1%)**, and SOL **$86.32 (-5.7%)** on a broad risk-off tape (S&P **-0.9%**, VIX **22.6**). Despite the drawdown, BTC Guru prints an **Ensemble Score: 0.0932** in a **BREAKOUT** regime with **RSI 1h/4h: 71.4/67.3** and positive momentum (**MACD hist: 299.26**), while trends are **bullish/bullish/bearish** across **1h/4h/1d**\u2014classic \u201ccounter-trend pop\u201d conditions inside a still-weak daily structure. The m"
+}

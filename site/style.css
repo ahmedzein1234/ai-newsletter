@@ -1,24 +1,589 @@
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#f8fafc;color:#1e293b;font-family:system-ui,-apple-system,sans-serif;line-height:1.6}
-.container{max-width:720px;margin:0 auto;padding:24px 16px}
-header{margin-bottom:32px}
-header h1{font-size:28px;font-weight:700}
-.date{color:#64748b;font-size:14px;margin-top:4px}
-.back{color:#2563eb;text-decoration:none;font-size:14px;display:inline-block;margin-bottom:8px}
-.back:hover{text-decoration:underline}
-section{margin-bottom:28px}
-section h2{font-size:18px;font-weight:700;color:#1e293b;border-bottom:2px solid #2563eb;padding-bottom:6px;margin-bottom:12px}
-section ul{list-style:none}
-section li{margin-bottom:14px}
-section a{color:#2563eb;text-decoration:none;font-weight:600;font-size:15px}
-section a:hover{text-decoration:underline}
-.source{color:#94a3b8;font-size:12px;margin-left:6px}
-.summary{color:#64748b;font-size:13px;margin-top:2px}
-.analysis{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:20px;margin-bottom:28px}
-.analysis h2{border-bottom-color:#d97706}
-.analysis-body{color:#334155;font-size:14px;line-height:1.7;white-space:pre-line}
-footer{border-top:1px solid #e2e8f0;padding-top:16px;margin-top:32px;color:#94a3b8;font-size:12px}
-.archive-list{list-style:none}
-.archive-list li{margin-bottom:8px}
-.archive-list a{color:#2563eb;text-decoration:none;font-size:16px;font-weight:500}
-.archive-list a:hover{text-decoration:underline}
+/* ============================================
+   Zein's AI Newsletter — V3 Premium Style Sheet
+   ============================================ */
+
+:root {
+  --claude-news: #7c3aed;
+  --claude-plugins: #6366f1;
+  --ai-tools: #2563eb;
+  --ai-startups-uae: #059669;
+  --ai-realestate: #0891b2;
+  --world-news: #dc2626;
+  --monetization: #ea580c;
+  --crypto: #d97706;
+  --gold-quant: #b45309;
+  --quick-links: #64748b;
+  --text: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --green: #059669;
+  --red: #dc2626;
+}
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--ai-tools); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---- Container ---- */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ---- Dark Header Band ---- */
+.site-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  padding: 28px 32px 24px;
+  border-radius: 0 0 16px 16px;
+  margin-bottom: 24px;
+}
+
+.site-header .back {
+  display: inline-block;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.site-header .back:hover { color: #e2e8f0; }
+
+.site-header h1 {
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.header-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-meta .date {
+  color: #94a3b8;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+}
+
+.header-meta .read-time {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  color: #e2e8f0;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* ---- Content Area ---- */
+.content-area {
+  padding: 0 24px;
+}
+
+/* ---- Crypto Dashboard ---- */
+.crypto-dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.crypto-card {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.02);
+  border-top: 3px solid var(--crypto);
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.crypto-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.crypto-card .coin-name {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.crypto-card .coin-ticker {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.crypto-card .price {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  letter-spacing: -0.3px;
+  margin-bottom: 4px;
+}
+
+.crypto-card .change {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.crypto-card .change.up { color: var(--green); }
+.crypto-card .change.down { color: var(--red); }
+
+.crypto-card .volume {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Fear & Greed Indicator */
+.fng-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin-bottom: 28px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.fng-strip .fng-label { font-weight: 700; }
+.fng-strip .fng-value {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 14px;
+  color: #fff;
+}
+
+.fng-extreme-fear { background: #dc2626; }
+.fng-fear { background: #ea580c; }
+.fng-neutral { background: #d97706; }
+.fng-greed { background: #65a30d; }
+.fng-extreme-greed { background: #059669; }
+
+/* ---- Today's AI Landscape (Digest) ---- */
+.digest {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin-bottom: 28px;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.digest .section-pill {
+  background: #2563eb;
+}
+
+.digest-body {
+  color: #1e3a5f;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* ---- Section Pills ---- */
+.section-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* ---- Must-Reads ---- */
+.must-reads {
+  margin-bottom: 28px;
+}
+
+.must-reads .section-pill {
+  background: #1e40af;
+}
+
+.must-reads-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border-radius: 12px;
+  border-top: 3px solid var(--ai-tools);
+  padding: 18px;
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.02);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.card-summary {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.card-source {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+/* ---- Badges ---- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  color: #fff;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.badge-high   { background: #dc2626; }
+.badge-medium { background: #d97706; }
+.badge-low    { background: #2563eb; }
+.badge-muted  { background: #94a3b8; }
+
+/* ---- Analysis Cards (Glass Morphism) ---- */
+.analysis-card {
+  background: rgba(255,251,235,0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(217,119,6,0.15);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.analysis-card .section-pill { background: #d97706; }
+
+.analysis-card .analysis-body {
+  color: #451a03;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* ---- Rendered Markdown in analysis/special bodies ---- */
+.analysis-body p,
+.special-body p,
+.digest-body p {
+  margin: 8px 0;
+}
+
+.analysis-body strong,
+.special-body strong,
+.digest-body strong {
+  font-weight: 700;
+}
+
+.analysis-body ul,
+.special-body ul,
+.digest-body ul {
+  padding-left: 20px;
+  margin: 6px 0;
+}
+
+.analysis-body ol,
+.special-body ol,
+.digest-body ol {
+  padding-left: 20px;
+  margin: 6px 0;
+}
+
+.analysis-body li,
+.special-body li,
+.digest-body li {
+  margin-bottom: 4px;
+}
+
+.analysis-body table,
+.special-body table,
+.digest-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+.analysis-body th,
+.special-body th,
+.digest-body th {
+  background: rgba(0,0,0,0.05);
+  padding: 6px 10px;
+  text-align: left;
+  font-weight: 700;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.analysis-body td,
+.special-body td,
+.digest-body td {
+  padding: 5px 10px;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* ---- Read Time Pill ---- */
+.read-time {
+  display: inline-block;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  padding: 1px 8px;
+  border-radius: 10px;
+}
+
+/* ---- News Sections ---- */
+.news-section {
+  margin-bottom: 28px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.section-header .section-pill { margin-bottom: 0; }
+
+.section-header .section-title {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.article-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.article-row:last-child { border-bottom: none; }
+
+.article-content { flex: 1; min-width: 0; }
+
+.article-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.article-title-row a {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.article-title-row a:hover { color: var(--ai-tools); }
+
+.summary {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 3px;
+}
+
+.source {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ---- Special Sections (World, Monetization, UAE) ---- */
+.special-card {
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.special-body {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.special-card.world-news {
+  background: rgba(254,242,242,0.85);
+  border-color: rgba(220,38,38,0.12);
+}
+.special-card.world-news .section-pill { background: #dc2626; }
+.special-card.world-news .special-body { color: #450a0a; }
+
+.special-card.monetization {
+  background: rgba(240,253,244,0.85);
+  border-color: rgba(5,150,105,0.12);
+}
+.special-card.monetization .section-pill { background: #059669; }
+.special-card.monetization .special-body { color: #14532d; }
+
+.special-card.uae {
+  background: rgba(240,253,250,0.85);
+  border-color: rgba(8,145,178,0.12);
+}
+.special-card.uae .section-pill { background: #0891b2; }
+.special-card.uae .special-body { color: #164e63; }
+
+/* ---- Cost Footer ---- */
+.cost-footer {
+  text-align: center;
+  color: var(--text-muted);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  padding: 12px;
+  background: var(--surface);
+  border-radius: 10px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 16px 16px 0 0;
+  padding: 24px 32px;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.site-footer p {
+  color: #94a3b8;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.site-footer a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+.site-footer a:hover { text-decoration: underline; }
+
+/* ---- Archive Page ---- */
+.archive-list { list-style: none; }
+
+.archive-list li {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.archive-list li:last-child { border-bottom: none; }
+
+.archive-list a {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ai-tools);
+}
+
+.archive-list a:hover { text-decoration: underline; }
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .content-area { padding: 0 16px; }
+  .site-header { padding: 20px 16px 18px; border-radius: 0; }
+  .site-header h1 { font-size: 22px; }
+
+  .crypto-dashboard {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .crypto-card .price { font-size: 17px; }
+
+  .must-reads-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card { padding: 14px; }
+  .article-title-row { flex-direction: column; gap: 4px; }
+
+  .analysis-card,
+  .digest,
+  .special-card { padding: 16px 18px; }
+
+  .site-footer { border-radius: 0; }
+}

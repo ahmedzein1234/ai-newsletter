@@ -1,66 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
-<head><meta charset="utf-8"></head>
-<body style="margin:0;padding:0;background:#f4f4f5;font-family:system-ui,-apple-system,sans-serif;">
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f5;padding:20px 0;">
-<tr><td align="center">
-<table width="600" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:8px;overflow:hidden;max-width:600px;">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Zein's AI Newsletter — {{ date_formatted }}</title>
+<!--[if mso]><style>table{border-collapse:collapse;}td{font-family:Georgia,serif;}</style><![endif]-->
+</head>
+<body style="margin:0;padding:0;background:#f1f5f9;font-family:Georgia,'Times New Roman',serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
 
-<!-- Header -->
-<tr><td style="background:#1e293b;padding:24px 32px;">
-  <h1 style="margin:0;color:#fff;font-size:22px;">AI Daily Brief</h1>
-  <p style="margin:4px 0 0;color:#94a3b8;font-size:14px;">{{ date }}</p>
+<!-- Outer wrapper -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f1f5f9;padding:24px 0;">
+<tr><td align="center">
+
+<!-- Main container -->
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border-radius:12px;overflow:hidden;max-width:600px;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+
+<!-- ====== HEADER ====== -->
+<tr><td style="background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);padding:28px 32px 24px;">
+  <h1 style="margin:0;color:#ffffff;font-size:24px;font-weight:700;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;letter-spacing:-0.3px;">Zein's AI Newsletter</h1>
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:10px;"><tr>
+    <td style="color:#94a3b8;font-size:14px;font-family:system-ui,-apple-system,sans-serif;">{{ date_formatted }}</td>
+    <td style="padding-left:12px;">
+      <span style="display:inline-block;background:rgba(255,255,255,0.15);color:#ffffff;font-size:12px;font-family:system-ui,-apple-system,sans-serif;padding:3px 10px;border-radius:12px;">{{ total_read_time }} min read</span>
+    </td>
+  </tr></table>
 </td></tr>
 
-<!-- Intro -->
-<tr><td style="padding:20px 32px 8px;">
-  <p style="margin:0;color:#475569;font-size:14px;line-height:1.5;">
-    Today's curated AI + market news. <a href="{{ page_url }}" style="color:#2563eb;">Read full edition online &rarr;</a>
+<!-- ====== INTRO ====== -->
+<tr><td style="padding:20px 32px 12px;">
+  <p style="margin:0;color:#475569;font-size:15px;line-height:1.6;font-family:Georgia,'Times New Roman',serif;">
+    Today's curated AI + market news.
+    <a href="{{ page_url }}" style="color:#2563eb;text-decoration:none;font-weight:600;"> Read full edition online &rarr;</a>
   </p>
 </td></tr>
 
-{% if analysis %}
-<!-- Market Analysis -->
-<tr><td style="padding:16px 32px 4px;">
-  <h2 style="margin:0;font-size:16px;color:#1e293b;border-bottom:2px solid #d97706;padding-bottom:6px;">
-    Market Analysis & 24h Outlook
-  </h2>
+{% if crypto_dashboard %}
+<!-- ====== CRYPTO DASHBOARD ====== -->
+<tr><td style="padding:8px 32px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fffbeb;border-radius:10px;overflow:hidden;border:1px solid rgba(217,119,6,0.15);">
+    <tr><td style="padding:14px 20px 6px;">
+      <span style="display:inline-block;background:#d97706;color:#fff;font-size:11px;font-weight:700;font-family:system-ui,-apple-system,sans-serif;padding:3px 10px;border-radius:12px;letter-spacing:0.3px;text-transform:uppercase;">Crypto Dashboard</span>
+    </td></tr>
+    <tr><td style="padding:8px 20px 16px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          {% for coin in crypto_dashboard %}
+          <td width="25%" style="text-align:center;padding:8px 4px;{% if not loop.last %}border-right:1px solid rgba(217,119,6,0.1);{% endif %}">
+            <p style="margin:0;font-family:system-ui,-apple-system,sans-serif;font-size:11px;font-weight:600;color:#92400e;text-transform:uppercase;letter-spacing:0.5px;">{{ coin.ticker }}</p>
+            <p style="margin:4px 0 2px;font-family:system-ui,-apple-system,sans-serif;font-size:16px;font-weight:700;color:#1e293b;">${{ "{:,.0f}".format(coin.price) if coin.price >= 100 else "{:,.2f}".format(coin.price) }}</p>
+            <p style="margin:0;font-family:system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600;color:{{ '#059669' if coin.up else '#dc2626' }};">{{ "+" if coin.up else "" }}{{ "{:.1f}".format(coin.change) }}%</p>
+          </td>
+          {% endfor %}
+        </tr>
+      </table>
+    </td></tr>
+    {% if fear_greed %}
+    <tr><td style="padding:0 20px 14px;">
+      <p style="margin:0;text-align:center;font-family:system-ui,-apple-system,sans-serif;font-size:12px;color:#92400e;">
+        Fear &amp; Greed: <strong>{{ fear_greed.value }}</strong>/100 — {{ fear_greed.label }}
+      </p>
+    </td></tr>
+    {% endif %}
+  </table>
 </td></tr>
-<tr><td style="padding:8px 32px 16px;">
-  <div style="color:#334155;font-size:13px;line-height:1.7;white-space:pre-line;">{{ analysis }}</div>
+{% endif %}
+
+{% if news_digest %}
+<!-- ====== TODAY'S AI LANDSCAPE ====== -->
+<tr><td style="padding:12px 32px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%);border-radius:10px;border:1px solid rgba(37,99,235,0.1);">
+    <tr><td style="padding:18px 20px;">
+      <span style="display:inline-block;background:#2563eb;color:#fff;font-size:11px;font-weight:700;font-family:system-ui,-apple-system,sans-serif;padding:3px 10px;border-radius:12px;letter-spacing:0.3px;text-transform:uppercase;margin-bottom:10px;">AI Landscape</span>
+      <div style="color:#1e3a5f;font-size:14px;line-height:1.7;font-family:Georgia,'Times New Roman',serif;margin-top:8px;">{{ news_digest }}</div>
+    </td></tr>
+  </table>
+</td></tr>
+{% endif %}
+
+{% if must_reads %}
+<!-- ====== MUST-READS HERO ====== -->
+<tr><td style="padding:12px 32px 0;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr><td style="padding:0 0 10px;">
+      <span style="display:inline-block;background:#1e40af;color:#fff;font-size:11px;font-weight:700;font-family:system-ui,-apple-system,sans-serif;padding:3px 10px;border-radius:12px;letter-spacing:0.3px;text-transform:uppercase;">Must-Reads</span>
+    </td></tr>
+    {% for item in must_reads[:3] %}
+    <tr><td style="padding:4px 0 {% if loop.last %}12px{% else %}4px{% endif %};">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;border-top:3px solid {% if item.importance >= 9 %}#dc2626{% elif item.importance >= 7 %}#d97706{% else %}#2563eb{% endif %};">
+        <tr><td style="padding:14px 16px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+            <td style="vertical-align:top;padding-right:10px;">
+              <span style="display:inline-block;width:24px;height:24px;border-radius:50%;background:{% if item.importance >= 9 %}#dc2626{% elif item.importance >= 7 %}#d97706{% elif item.importance >= 5 %}#2563eb{% else %}#94a3b8{% endif %};color:#fff;text-align:center;line-height:24px;font-size:12px;font-weight:700;font-family:system-ui,sans-serif;">{{ item.importance }}</span>
+            </td>
+            <td>
+              <a href="{{ item.url }}" style="color:#1e293b;text-decoration:none;font-size:15px;font-weight:700;font-family:system-ui,-apple-system,sans-serif;line-height:1.4;">{{ item.editorial_title or item.title }}</a>
+              {% if item.one_line %}
+              <p style="margin:4px 0 0;color:#475569;font-size:14px;line-height:1.5;font-family:Georgia,'Times New Roman',serif;">{{ item.one_line }}</p>
+              {% endif %}
+              <p style="margin:6px 0 0;color:#94a3b8;font-size:12px;font-family:system-ui,-apple-system,sans-serif;">
+                {{ item.read_time }} min &middot; {{ item.source }}
+              </p>
+            </td>
+          </tr></table>
+        </td></tr>
+      </table>
+    </td></tr>
+    {% endfor %}
+  </table>
+</td></tr>
+{% endif %}
+
+{% if analysis %}
+<!-- ====== MARKET ANALYSIS ====== -->
+<tr><td style="padding:16px 32px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fffbeb;border-radius:10px;border:1px solid rgba(217,119,6,0.15);">
+    <tr><td style="padding:18px 20px;">
+      <span style="display:inline-block;background:#d97706;color:#fff;font-size:11px;font-weight:700;font-family:system-ui,-apple-system,sans-serif;padding:3px 10px;border-radius:12px;letter-spacing:0.3px;text-transform:uppercase;margin-bottom:10px;">Market Analysis &amp; 24h Outlook</span>
+      <div style="color:#451a03;font-size:14px;line-height:1.7;font-family:Georgia,'Times New Roman',serif;margin-top:8px;">{{ analysis }}</div>
+    </td></tr>
+  </table>
 </td></tr>
 {% endif %}
 
 {% for section in sections %}
-<!-- Section: {{ section.title }} -->
+<!-- ====== SECTION: {{ section.title }} ====== -->
 <tr><td style="padding:16px 32px 4px;">
-  <h2 style="margin:0;font-size:16px;color:#1e293b;border-bottom:2px solid {% if section.key == 'crypto' %}#f59e0b{% elif section.key == 'gold_quant' %}#d97706{% else %}#2563eb{% endif %};padding-bottom:6px;">
-    {{ section.title }}
-  </h2>
+  <span style="display:inline-block;background:{{ section.color }};color:#fff;font-size:11px;font-weight:700;font-family:system-ui,-apple-system,sans-serif;padding:3px 10px;border-radius:12px;letter-spacing:0.3px;text-transform:uppercase;">{{ section.title }}</span>
 </td></tr>
 {% for item in section.entries[:8] %}
-<tr><td style="padding:4px 32px;">
-  <p style="margin:0;font-size:14px;line-height:1.6;">
-    <a href="{{ item.url }}" style="color:#2563eb;text-decoration:none;font-weight:600;">{{ item.title }}</a>
-    <span style="color:#94a3b8;font-size:12px;"> — {{ item.source }}</span>
-  </p>
-  {% if item.one_line and item.one_line != item.title[:80] %}
-  <p style="margin:2px 0 8px;color:#64748b;font-size:13px;">{{ item.one_line }}</p>
-  {% endif %}
+<tr><td style="padding:6px 32px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+    <td style="vertical-align:top;width:28px;padding-top:2px;">
+      <span style="display:inline-block;width:20px;height:20px;border-radius:50%;background:{% if item.importance >= 9 %}#dc2626{% elif item.importance >= 7 %}#d97706{% elif item.importance >= 5 %}#2563eb{% else %}#94a3b8{% endif %};color:#fff;text-align:center;line-height:20px;font-size:11px;font-weight:700;font-family:system-ui,sans-serif;">{{ item.importance }}</span>
+    </td>
+    <td>
+      <a href="{{ item.url }}" style="color:#1e293b;text-decoration:none;font-size:14px;font-weight:700;font-family:system-ui,-apple-system,sans-serif;">{{ item.editorial_title or item.title }}</a>
+      <span style="display:inline-block;background:#f1f5f9;color:#64748b;font-size:11px;font-family:system-ui,sans-serif;padding:1px 7px;border-radius:8px;margin-left:6px;vertical-align:middle;">{{ item.read_time }}m</span>
+      {% if item.one_line and item.one_line != (item.editorial_title or item.title)[:80] %}
+      <p style="margin:3px 0 0;color:#64748b;font-size:13px;line-height:1.5;font-family:Georgia,'Times New Roman',serif;">{{ item.one_line }}</p>
+      {% endif %}
+      <p style="margin:2px 0 6px;color:#94a3b8;font-size:12px;font-family:system-ui,sans-serif;">{{ item.source }}</p>
+    </td>
+  </tr></table>
 </td></tr>
 {% endfor %}
 {% endfor %}
 
-<!-- Footer -->
-<tr><td style="padding:20px 32px;border-top:1px solid #e2e8f0;">
-  <p style="margin:0;color:#94a3b8;font-size:12px;text-align:center;">
-    <a href="{{ page_url }}" style="color:#2563eb;">Full edition</a> &middot;
-    Analysis by Kimi K2.5 &middot; Data from CoinGecko
+{% if world_analysis %}
+<!-- ====== WORLD NEWS ANALYSIS ====== -->
+<tr><td style="padding:16px 32px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fef2f2;border-radius:10px;border:1px solid rgba(220,38,38,0.1);">
+    <tr><td style="padding:18px 20px;">
+      <span style="display:inline-block;background:#dc2626;color:#fff;font-size:11px;font-weight:700;font-family:system-ui,-apple-system,sans-serif;padding:3px 10px;border-radius:12px;letter-spacing:0.3px;text-transform:uppercase;margin-bottom:10px;">World News &amp; Geopolitics</span>
+      <div style="color:#450a0a;font-size:14px;line-height:1.7;font-family:Georgia,'Times New Roman',serif;margin-top:8px;">{{ world_analysis }}</div>
+    </td></tr>
+  </table>
+</td></tr>
+{% endif %}
+
+{% if monetization_ideas %}
+<!-- ====== MONETIZATION IDEAS ====== -->
+<tr><td style="padding:16px 32px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f0fdf4;border-radius:10px;border:1px solid rgba(5,150,105,0.1);">
+    <tr><td style="padding:18px 20px;">
+      <span style="display:inline-block;background:#059669;color:#fff;font-size:11px;font-weight:700;font-family:system-ui,-apple-system,sans-serif;padding:3px 10px;border-radius:12px;letter-spacing:0.3px;text-transform:uppercase;margin-bottom:10px;">Monetization Ideas</span>
+      <div style="color:#14532d;font-size:14px;line-height:1.7;font-family:Georgia,'Times New Roman',serif;margin-top:8px;">{{ monetization_ideas }}</div>
+    </td></tr>
+  </table>
+</td></tr>
+{% endif %}
+
+{% if uae_analysis %}
+<!-- ====== UAE STARTUP ANALYSIS ====== -->
+<tr><td style="padding:16px 32px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f0fdfa;border-radius:10px;border:1px solid rgba(8,145,178,0.1);">
+    <tr><td style="padding:18px 20px;">
+      <span style="display:inline-block;background:#0891b2;color:#fff;font-size:11px;font-weight:700;font-family:system-ui,-apple-system,sans-serif;padding:3px 10px;border-radius:12px;letter-spacing:0.3px;text-transform:uppercase;margin-bottom:10px;">UAE Startup Analysis</span>
+      <div style="color:#164e63;font-size:14px;line-height:1.7;font-family:Georgia,'Times New Roman',serif;margin-top:8px;">{{ uae_analysis }}</div>
+    </td></tr>
+  </table>
+</td></tr>
+{% endif %}
+
+{% if cost_info %}
+<!-- ====== COST FOOTER ====== -->
+<tr><td style="padding:20px 32px 8px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f8fafc;border-radius:8px;">
+    <tr><td style="padding:10px 16px;text-align:center;">
+      <p style="margin:0;color:#94a3b8;font-size:11px;font-family:system-ui,-apple-system,sans-serif;">
+        This edition: ~${{ cost_info.est_cost_usd }} &middot; {{ cost_info.llm_calls }} LLM calls &middot; Powered by GPT 5.2
+      </p>
+    </td></tr>
+  </table>
+</td></tr>
+{% endif %}
+
+<!-- ====== FOOTER ====== -->
+<tr><td style="padding:20px 32px 28px;border-top:1px solid #e2e8f0;">
+  <p style="margin:0;color:#94a3b8;font-size:12px;text-align:center;font-family:system-ui,-apple-system,sans-serif;line-height:1.8;">
+    <a href="{{ page_url }}" style="color:#2563eb;text-decoration:none;">Full edition online</a> &middot;
+    <a href="#unsubscribe" style="color:#94a3b8;text-decoration:none;">Unsubscribe</a><br>
+    Curated by AI &middot; Edited by Ahmed Zein
   </p>
 </td></tr>
 
 </table>
+<!-- /Main container -->
+
 </td></tr>
 </table>
+<!-- /Outer wrapper -->
+
 </body>
 </html>

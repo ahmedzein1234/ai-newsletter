@@ -1,4 +1,4 @@
-"""Google News via public RSS feeds (free, no auth)."""
+"""AI real-estate / proptech news via Google News RSS feeds."""
 from __future__ import annotations
 
 import asyncio
@@ -8,11 +8,9 @@ import feedparser
 import httpx
 
 _QUERIES = [
-    "Claude AI",
-    "AI video generator",
-    "AI image generator",
-    "AI monetization",
-    "LLM tools",
+    "AI real estate",
+    "proptech AI",
+    "AI property management",
 ]
 
 _BASE = "https://news.google.com/rss/search?q={query}+when:1d&hl=en-US&gl=US&ceid=US:en"
@@ -35,7 +33,7 @@ async def fetch(client: httpx.AsyncClient) -> list[dict]:
         out = []
         for entry in feed.entries[:10]:
             out.append({
-                "id": f"gnews-{hash(entry.get('link', ''))}",
+                "id": f"gnews-realestate-{hash(entry.get('link', ''))}",
                 "title": entry.get("title", ""),
                 "url": entry.get("link", ""),
                 "source": "Google News",
@@ -52,4 +50,4 @@ async def fetch(client: httpx.AsyncClient) -> list[dict]:
                 seen.add(a["id"])
                 articles.append(a)
 
-    return articles[:30]
+    return articles[:20]

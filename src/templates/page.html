@@ -3,44 +3,149 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Daily Brief — {{ date }}</title>
+<title>Zein's AI Newsletter — {{ date_formatted }}</title>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div class="container">
-  <header>
+
+  <!-- Dark Header -->
+  <header class="site-header">
     <a href="../" class="back">&larr; Archive</a>
-    <h1>AI Daily Brief</h1>
-    <p class="date">{{ date }}</p>
+    <h1>Zein's AI Newsletter</h1>
+    <div class="header-meta">
+      <span class="date">{{ date_formatted }}</span>
+      <span class="read-time">{{ total_read_time }} min read</span>
+    </div>
   </header>
 
-  {% if analysis %}
-  <section class="analysis">
-    <h2>Market Analysis & 24h Outlook</h2>
-    <div class="analysis-body">{{ analysis }}</div>
+  <div class="content-area">
+
+  {% if crypto_dashboard %}
+  <!-- Crypto Dashboard -->
+  <div class="crypto-dashboard">
+    {% for coin in crypto_dashboard %}
+    <div class="crypto-card">
+      <div class="coin-name">{{ coin.name }}</div>
+      <div class="coin-ticker">{{ coin.ticker }}</div>
+      <div class="price">${{ "{:,.0f}".format(coin.price) if coin.price >= 100 else "{:,.2f}".format(coin.price) }}</div>
+      <div class="change {{ 'up' if coin.up else 'down' }}">{{ "+" if coin.up else "" }}{{ "{:.1f}".format(coin.change) }}%</div>
+      <div class="volume">Vol: ${{ "{:,.0f}M".format(coin.volume / 1000000) }}</div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if fear_greed %}
+  <!-- Fear & Greed Strip -->
+  <div class="fng-strip">
+    <span>Fear &amp; Greed Index</span>
+    <span class="fng-value {% if fear_greed.value <= 20 %}fng-extreme-fear{% elif fear_greed.value <= 40 %}fng-fear{% elif fear_greed.value <= 60 %}fng-neutral{% elif fear_greed.value <= 80 %}fng-greed{% else %}fng-extreme-greed{% endif %}">{{ fear_greed.value }}</span>
+    <span class="fng-label">{{ fear_greed.label }}</span>
+  </div>
+  {% endif %}
+
+  {% if news_digest %}
+  <!-- Today's AI Landscape -->
+  <section class="digest">
+    <span class="section-pill">AI Landscape</span>
+    <div class="digest-body">{{ news_digest|safe }}</div>
   </section>
   {% endif %}
 
-  {% for section in sections %}
-  <section>
-    <h2>{{ section.title }}</h2>
-    <ul>
-    {% for item in section.entries %}
-      <li>
-        <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
-        <span class="source">{{ item.source }}</span>
+  {% if must_reads %}
+  <!-- Must-Reads -->
+  <section class="must-reads">
+    <span class="section-pill">Must-Reads</span>
+    <div class="must-reads-grid">
+      {% for item in must_reads[:3] %}
+      <a href="{{ item.url }}" target="_blank" rel="noopener" class="card" style="border-top-color:{% if item.importance >= 9 %}#dc2626{% elif item.importance >= 7 %}#d97706{% else %}#2563eb{% endif %};">
+        <div class="card-header">
+          <span class="badge {% if item.importance >= 9 %}badge-high{% elif item.importance >= 7 %}badge-medium{% elif item.importance >= 5 %}badge-low{% else %}badge-muted{% endif %}">{{ item.importance }}</span>
+          <span class="read-time">{{ item.read_time }}m</span>
+        </div>
+        <h3>{{ item.editorial_title or item.title }}</h3>
         {% if item.one_line %}
+        <p class="card-summary">{{ item.one_line }}</p>
+        {% endif %}
+        <span class="card-source">{{ item.source }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if analysis %}
+  <!-- Market Analysis -->
+  <div class="analysis-card">
+    <span class="section-pill">Market Analysis &amp; 24h Outlook</span>
+    <div class="analysis-body">{{ analysis|safe }}</div>
+  </div>
+  {% endif %}
+
+  {% for section in sections %}
+  <!-- Section: {{ section.title }} -->
+  <section class="news-section">
+    <div class="section-header">
+      <span class="section-pill" style="background:{{ section.color }};">{{ section.title }}</span>
+    </div>
+    {% for item in section.entries %}
+    <div class="article-row">
+      <span class="badge {% if item.importance >= 9 %}badge-high{% elif item.importance >= 7 %}badge-medium{% elif item.importance >= 5 %}badge-low{% else %}badge-muted{% endif %}">{{ item.importance }}</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.editorial_title or item.title }}</a>
+          <span class="read-time">{{ item.read_time }}m</span>
+        </div>
+        {% if item.one_line and item.one_line != (item.editorial_title or item.title)[:80] %}
         <p class="summary">{{ item.one_line }}</p>
         {% endif %}
-      </li>
+        <span class="source">{{ item.source }}</span>
+      </div>
+    </div>
     {% endfor %}
-    </ul>
   </section>
   {% endfor %}
 
-  <footer>
-    <p>Curated by Kimi K2.5 via OpenRouter. Sources: Hacker News, Reddit, Google News, GitHub, Dev.to, CoinGecko.</p>
+  {% if world_analysis %}
+  <!-- World News Analysis -->
+  <div class="special-card world-news">
+    <span class="section-pill">World News &amp; Geopolitics</span>
+    <div class="special-body">{{ world_analysis|safe }}</div>
+  </div>
+  {% endif %}
+
+  {% if monetization_ideas %}
+  <!-- Monetization Ideas -->
+  <div class="special-card monetization">
+    <span class="section-pill">Monetization Ideas</span>
+    <div class="special-body">{{ monetization_ideas|safe }}</div>
+  </div>
+  {% endif %}
+
+  {% if uae_analysis %}
+  <!-- UAE Startup Analysis -->
+  <div class="special-card uae">
+    <span class="section-pill">UAE Startup Analysis</span>
+    <div class="special-body">{{ uae_analysis|safe }}</div>
+  </div>
+  {% endif %}
+
+  {% if cost_info %}
+  <!-- Cost Footer -->
+  <div class="cost-footer">
+    This edition: ~${{ cost_info.est_cost_usd }} &middot; {{ cost_info.llm_calls }} LLM calls &middot; Powered by GPT 5.2
+  </div>
+  {% endif %}
+
+  </div><!-- /content-area -->
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>Curated by AI &middot; Edited by Ahmed Zein</p>
+    <p>Sources: Hacker News, Reddit, Google News, GitHub, Dev.to, Binance, BTC Guru</p>
   </footer>
+
 </div>
 </body>
 </html>
