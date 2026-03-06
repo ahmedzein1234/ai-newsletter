@@ -1,26 +1,26 @@
 {
   "date": "2026-03-06",
-  "article_count": 83,
+  "article_count": 81,
   "section_counts": {
-    "claude_plugins": 5,
-    "claude_news": 6,
-    "ai_tools": 3,
-    "world_news": 6,
+    "claude_plugins": 2,
+    "claude_news": 13,
     "monetization": 1,
+    "ai_tools": 2,
+    "world_news": 1,
     "crypto": 31,
     "gold_quant": 31
   },
   "top_headlines": [
-    "Claude Code Context Reduction: MCP Server Slashes Consumption by 98%",
-    "Context Mode: Shrinking Claude Code MCP Output by Over 98%",
+    "MCP Server Reduces Claude Code Context Consumption by 98%!",
+    "Context Mode: Reduce Claude Code MCP Output from 315KB to 5.4KB!",
     "BTC Guru: BULLISH (32% conf) \u2014 Regime: BREAKOUT",
-    "CodeYam Memory: Comprehensive Memory Management for Claude Code",
-    "Declarative Open-Source Framework for MCPs with Search and Execute",
-    "Bitcoin ($69,819.38) \u2014 -4.0% 24h",
-    "Ethereum ($2,042.37) \u2014 -4.1% 24h",
-    "BNB ($636.49) \u2014 -3.0% 24h",
-    "Cardano ($0.27) \u2014 -3.5% 24h",
-    "XRP ($1.39) \u2014 -3.4% 24h"
+    "Pentagon Labels Anthropic a Supply-Chain Risk: What It Means",
+    "Claude Code Adds Voice Mode: New Ways to Interact with AI",
+    "Bitcoin ($69,920.03) \u2014 -3.8% 24h",
+    "Ethereum ($2,043.37) \u2014 -4.0% 24h",
+    "BNB ($638.06) \u2014 -3.0% 24h",
+    "Cardano ($0.27) \u2014 -3.4% 24h",
+    "XRP ($1.39) \u2014 -3.1% 24h"
   ],
-  "analysis_summary": "**Crypto Market: Sentiment & 24h Outlook** BTC is at **$69,832 (-4.0%)**, ETH **$2,042.53 (-4.1%)**, and SOL **$86.32 (-5.7%)** on a broad risk-off tape (S&P **-0.9%**, VIX **22.6**). Despite the drawdown, BTC Guru prints an **Ensemble Score: 0.0932** in a **BREAKOUT** regime with **RSI 1h/4h: 71.4/67.3** and positive momentum (**MACD hist: 299.26**), while trends are **bullish/bullish/bearish** across **1h/4h/1d**\u2014classic \u201ccounter-trend pop\u201d conditions inside a still-weak daily structure. The m"
+  "analysis_summary": "**Crypto Market: Sentiment & 24h Outlook** BTC is at **$69,955.78 (-3.7%)** with **$1,616M** spot volume, ETH **$2,045.22 (-3.8%)** on **$816M**, and SOL **$86.49 (-5.4%)** on **$289M**\u2014still a de-risking tape with equities weak (**S&P -0.9%**) and volatility sticky (**VIX 22.6**). Even so, BTC Guru\u2019s ensemble is **0.0932** in a **BREAKOUT** regime with momentum hot (RSI **71.4/67.3** on 1h/4h; MACD hist **299.3**), and a **BULLISH (32% conf)** path to **$72,179** if **$70K** reclaims cleanly. P"
 }

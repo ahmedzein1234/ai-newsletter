@@ -3,589 +3,1277 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Daily Brief — 2026-03-06</title>
+<title>Zein's AI Newsletter — Mar 6, 2026</title>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div class="container">
-  <header>
+
+  <!-- Dark Header -->
+  <header class="site-header">
     <a href="../" class="back">&larr; Archive</a>
-    <h1>AI Daily Brief</h1>
-    <p class="date">2026-03-06</p>
+    <h1>Zein's AI Newsletter</h1>
+    <div class="header-meta">
+      <span class="date">Mar 6, 2026</span>
+      <span class="read-time">143 min read</span>
+    </div>
   </header>
 
+  <div class="content-area">
+
   
-  <section class="analysis">
-    <h2>Market Analysis & 24h Outlook</h2>
-    <div class="analysis-body">## 1. Crypto Market: Sentiment &amp; 24h Outlook
+  <!-- Crypto Dashboard -->
+  <div class="crypto-dashboard">
+    
+    <div class="crypto-card">
+      <div class="coin-name">Bitcoin</div>
+      <div class="coin-ticker">BTC</div>
+      <div class="price">$69,956</div>
+      <div class="change down">-3.7%</div>
+      <div class="volume">Vol: $1,616M</div>
+    </div>
+    
+    <div class="crypto-card">
+      <div class="coin-name">Ethereum</div>
+      <div class="coin-ticker">ETH</div>
+      <div class="price">$2,045</div>
+      <div class="change down">-3.8%</div>
+      <div class="volume">Vol: $816M</div>
+    </div>
+    
+    <div class="crypto-card">
+      <div class="coin-name">Solana</div>
+      <div class="coin-ticker">SOL</div>
+      <div class="price">$86.49</div>
+      <div class="change down">-5.4%</div>
+      <div class="volume">Vol: $289M</div>
+    </div>
+    
+    <div class="crypto-card">
+      <div class="coin-name">XRP</div>
+      <div class="coin-ticker">XRP</div>
+      <div class="price">$1.39</div>
+      <div class="change down">-3.0%</div>
+      <div class="volume">Vol: $136M</div>
+    </div>
+    
+  </div>
+  
 
-BTC hovers at **$72,800** (+2.1%), ETH at **$2,640** (+4.3%), and SOL at **$174** (+3.9%). The Fear &amp; Greed Index reads **78 (Extreme Greed)**, but funding rates are cooling, signaling leveraged exhaustion. The **$272M short liquidation** candle provided the thrust above $70K, yet spot ETF flows are decelerating. Regulatory risk looms: the SEC’s framework submission to the White House and the stalled crypto bill create uncertainty that trumps Trump’s bullish rhetoric.
+  
+  <!-- Fear & Greed Strip -->
+  <div class="fng-strip">
+    <span>Fear &amp; Greed Index</span>
+    <span class="fng-value fng-extreme-fear">18</span>
+    <span class="fng-label">Extreme Fear</span>
+  </div>
+  
 
-**24h Outlook: Neutral.** Expect consolidation between **$71,000-$74,000** as early breakout longs take profit. For your halal spot bots, rotate toward ETH and XRP strength—altcoin season indicators are at two-year lows, meaning capital is selective, not broad. Avoid any lending-protocol tokens (e.g., AAVE, COMP) that might slip through filters; the SEC framework specifically targets yield-bearing assets. Set bids at $71.2K and stops tight on SOL; volatility will spike at the NYSE open.
-
-## 2. Gold &amp; Quant Trading
-
-Gold trades at **$2,918/oz**, pinned in a **$2,880-$2,950** chop. Middle East chaos (US-Iran-Israel) provides a geopolitical bid, but a **6-week high DXY** is smothering upside momentum. JPM’s $4,500 long-term forecast is noise for intraday models.
-
-**Quant Developments:** ESMA’s new MiFID II supervisory briefing tightens EU algo-trading compliance, likely compressing latency arbitrage windows. Meanwhile, the STAC-M3 benchmark record (Supermicro/Intel) signals an HFT hardware arms race irrelevant to spot bots, though the focus on **curve-fit testing** is critical—gold’s regime-shifting volatility will destroy over-optimized strategies.
-
-**24h Outlook: Flat to Lower.** Without fresh escalation in Israel, dollar strength drives gold toward **$2,890** support. Reduce position sizing and widen spreads; implied volatility is mispriced relative to actual chop.</div>
+  
+  <!-- Today's AI Landscape -->
+  <section class="digest">
+    <span class="section-pill">AI Landscape</span>
+    <div class="digest-body"><p>The biggest move today isn’t another context-window hack—it’s Washington: the <strong>Pentagon formally labeling Anthropic a “supply-chain risk,”</strong> even as talks reportedly restart on a defense AI deal, turning Claude from a developer darling into a procurement problem.</p>
+<p>That shift lands on top of a tooling storyline that was already loud in yesterday’s edition: <strong>Claude Code context reduction</strong> techniques (e.g., shrinking MCP output from <strong>315KB to 5.4KB</strong> and cutting consumption by <strong>98%</strong>) are now table stakes, while Anthropic pushes interaction upgrades like <strong>Claude Code Voice Mode</strong> and more transparent “tools I need” hints for faster agent workflows. Around it, the ecosystem is hardening and productizing: <strong>Cekura</strong> is pitching monitoring for voice/chat agents, and Anthropic’s red team is helping <strong>Firefox</strong> security—useful credibility when government trust is wobbling.</p>
+<p>The genuinely new tension versus yesterday is the combination of <strong>defense scrutiny</strong>, <strong>Amodei’s public clash with OpenAI over military messaging</strong>, and chatter that <strong>Nvidia may be pulling back</strong> from both OpenAI and Anthropic.</p>
+<p>One thing to watch: whether the Pentagon designation triggers contract freezes—or forces a rapid, auditable supply-chain disclosure playbook across frontier model vendors.</p></div>
   </section>
   
 
   
-  <section>
-    <h2>Claude Code &amp; MCP</h2>
-    <ul>
-    
-      <li>
-        <a href="https://sderosiaux.substack.com/p/claude-code-told-me-what-tools-it" target="_blank" rel="noopener">Claude Code told me what tools it needs to work faster</a>
-        <span class="source">Hacker News</span>
+  <!-- Must-Reads -->
+  <section class="must-reads">
+    <span class="section-pill">Must-Reads</span>
+    <div class="must-reads-grid">
+      
+      <a href="https://mksg.lu/blog/context-mode" target="_blank" rel="noopener" class="card" style="border-top-color:#dc2626;">
+        <div class="card-header">
+          <span class="badge badge-high">9</span>
+          <span class="read-time">1m</span>
+        </div>
+        <h3>MCP Server Reduces Claude Code Context Consumption by 98%!</h3>
         
-        <p class="summary">Claude Code told me what tools it needs to work faster.</p>
+        <p class="card-summary">Significantly reduces Claude&#39;s context window usage, enabling larger, more complex code projects.</p>
         
-      </li>
-    
-      <li>
-        <a href="https://www.wsj.com/politics/national-security/pentagon-formally-labels-anthropic-supply-chain-risk-escalating-conflict-ebdf0523" target="_blank" rel="noopener">Pentagon formally labels Anthropic supply-chain risk</a>
-        <span class="source">Hacker News</span>
+        <span class="card-source">Hacker News</span>
+      </a>
+      
+      <a href="https://github.com/mksglu/claude-context-mode" target="_blank" rel="noopener" class="card" style="border-top-color:#dc2626;">
+        <div class="card-header">
+          <span class="badge badge-high">9</span>
+          <span class="read-time">1m</span>
+        </div>
+        <h3>Context Mode: Reduce Claude Code MCP Output from 315KB to 5.4KB!</h3>
         
-        <p class="summary">Pentagon formally labels Anthropic supply-chain risk, escalating conflict.</p>
+        <p class="card-summary">Dramatically reduces MCP output size, improving Claude&#39;s efficiency and speed.</p>
         
-      </li>
-    
-      <li>
-        <a href="https://www.reddit.com/r/ClaudeAI/comments/1rls9rh/pentagon_formally_labels_anthropic_supplychain/" target="_blank" rel="noopener">Pentagon Formally Labels Anthropic Supply-Chain Risk, Escalating Conflict</a>
-        <span class="source">r/ClaudeAI</span>
+        <span class="card-source">Hacker News</span>
+      </a>
+      
+      <a href="https://www.binance.com/en/trade/BTCUSDT" target="_blank" rel="noopener" class="card" style="border-top-color:#dc2626;">
+        <div class="card-header">
+          <span class="badge badge-high">9</span>
+          <span class="read-time">2m</span>
+        </div>
+        <h3>BTC Guru: BULLISH (32% conf) — Regime: BREAKOUT</h3>
         
-        <p class="summary">Pentagon Formally Labels Anthropic Supply-Chain Risk, Escalating Conflict.</p>
+        <p class="card-summary">Ensemble: 0.1 | RSI 1h: 71 | F&amp;G: 10 (Extreme Fear) | Target: $72,179</p>
         
-      </li>
-    
-      <li>
-        <a href="https://techcrunch.com/2026/03/04/anthropic-ceo-dario-amodei-calls-openais-messaging-around-military-deal-straight-up-lies-report-says/" target="_blank" rel="noopener">Dario Amodei calls OpenAI’s messaging around military deal ‘straight up lies’</a>
-        <span class="source">Hacker News</span>
-        
-        <p class="summary">Dario Amodei calls OpenAI&#39;s military deal messaging &#39;straight up lies&#39;.</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://www.bloomberg.com/news/articles/2026-03-03/anthropic-nears-20-billion-revenue-run-rate-amid-pentagon-feud" target="_blank" rel="noopener">Anthropic Nears $20B Revenue Run Rate Amid Pentagon Feud</a>
-        <span class="source">Hacker News</span>
-        
-        <p class="summary">Anthropic Nears $20B Revenue Run Rate Amid Pentagon Feud.</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxQQ1kxdkh1ZFdjdlJpRDk3MVc0Ump2VXgyWUV0RjVjQ0J1Q01meVlCblA4SXhFR0RnOG9tUTVKLVpscUFuWFNZRmxvRjNuMW5hSDQya1EwWGhQODQ5YmZIVmR4a0ZSdFMzYXZqSU5iRUFQYmdqdVMwTVhLY2NnU2pia3FDY1ZqWE0?oc=5" target="_blank" rel="noopener">Anthropic’s AI tool Claude central to U.S. campaign in Iran, amid a bitter feud - The Washington Post</a>
-        <span class="source">Google News</span>
-        
-        <p class="summary">Anthropic’s AI tool Claude central to U.S. campaign in Iran.</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOWTFkdnRPQkVPTDVrX19ZVDBORXpaeF9WaGV3OWs2WGt0MXZwVHNYdlFuT3RiWU9DckRNYTB6bDF4dGl4RlpjVXoxYm1zZ3M2QVBzaWVMX0JucFJZVzNyQko1OVZCbFdLZG9rT0h6dVg1RE41ODRha3NpVlBVbkxGbHlOeko4RFdvdFVYM2dxSkcwY3BMR3FxZDNhZk1TWTJZNnhDczNhNy1GdU0?oc=5" target="_blank" rel="noopener">What I learned using Claude Sonnet to migrate Python to Rust - InfoWorld</a>
-        <span class="source">Google News</span>
-        
-        <p class="summary">What I learned using Claude Sonnet to migrate Python to Rust.</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.ycombinator.com/item?id=47244173" target="_blank" rel="noopener">Tell HN: I got Claude Max for my open source project</a>
-        <span class="source">Hacker News</span>
-        
-        <p class="summary">Tell HN: I got Claude Max for my open source project.</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://www.reddit.com/r/ClaudeAI/comments/1rlx0eq/privacy_just_a_reminder_to_turn_off_help_improve/" target="_blank" rel="noopener">PRIVACY: Just a reminder to turn off &#34;Help improve Claude&#34; if you&#39;re concerned about your chats becoming part of Claude&#39;s training data</a>
-        <span class="source">r/ClaudeAI</span>
-        
-        <p class="summary">PRIVACY: Turn off &#34;Help improve Claude&#34; to protect your data.</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://www.reddit.com/r/ClaudeAI/comments/1rlc71n/claude_desktop_app_silently_downloads_a_13_gb/" target="_blank" rel="noopener">Claude desktop app silently downloads a 13 GB file on every launch — and you can&#39;t stop it</a>
-        <span class="source">r/ClaudeAI</span>
-        
-        <p class="summary">Claude desktop app silently downloads a 13 GB file on every launch.</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFBMaTMwYUFNX0tqUXJWX0Nla0NKUThLTXktUFZBS2JmblNRb3F3THp2RTRWNkRqR0tFMUtxand5T0hhRGZ0ajdXdmlIOFNxSXE2ZDBZSzRZMm5wNWpnMXZNYmJBalFlcXhSdDNRaXNWTC1ncW9KNlln?oc=5" target="_blank" rel="noopener">Anthropic’s Claude is suddenly the most popular iPhone app following Pentagon feud - CNN</a>
-        <span class="source">Google News</span>
-        
-        <p class="summary">Anthropic’s Claude is suddenly the most popular iPhone app.</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPMy1IX1diWHVDVTkydURVRVhZMUtMNVV2V3ppRGRpWGc4YTF1ZlFRRElFbUM4MjJlODlEeUpGcDJteDNVaXZ6bmxreUtoVnBwYVQ2MWVMR3JRWEVpa053Y3o5R1pocGpWV0d6SV9xS2hEdXc5R3E3cU8yVkhiZWE1SW5SNnJBdGQzUGV0WWlUWFJTMW5LWUYyY1BBVW5KRl9fUW1zM3Fxcw?oc=5" target="_blank" rel="noopener">How to Switch From ChatGPT to Claude With Just 1 Simple Prompt - inc.com</a>
-        <span class="source">Google News</span>
-        
-        <p class="summary">How to Switch From ChatGPT to Claude With Just 1 Simple Prompt.</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNbGZwdUtHbzJaY3RPYVdtU25Ua2VwejZBNUpXa0tRWlRsOFA5ZGI5Y3U0MDRZdFhtU2ZoSEhOeG9wWWFEYWhQWHo0cnRNa0ZXZFJiS3ZxOVBYRFdFajBCQWxNdWsxeWJOMlhOS3VYd1plM3ZQRjhrbmFjNFEwSmg3MWRTbzZxZ0taRm5pQi1lbGQ0OHppNmhHX1NJYUZRQVJDcEJsdXFMVWh5QWdZOFJLcmFaaHo?oc=5" target="_blank" rel="noopener">Claude outages lay bare software developers&#39; growing reliance on AI: &#39;I guess I&#39;ll write code like a caveman&#39; - Business Insider</a>
-        <span class="source">Google News</span>
-        
-        <p class="summary">Claude outages lay bare software developers&#39; growing reliance on AI.</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVDdrTkZmSnBMQUlHdGkyQ3JuSWRmZGJVTmVRTUNnSnhUdXB1ZURHYnNpMnBxazRkSTdCdnpkczBYcWUxY1NRNFgxWVdKOXljY3lrM1RTdm5WMjRsWUJUN2lPcm5pUkszWVBjcURMRjBtYkNrWTVOYm9pMnlmVm5sMTZybXpOQ29pSjJ3QlEtS0tidGxGaTVJTmFyZEdOclo0bFJ5T3RIUEtXZw?oc=5" target="_blank" rel="noopener">The one thing Claude does better than any other AI — and how to try it yourself - Tom&#39;s Guide</a>
-        <span class="source">Google News</span>
-        
-        <p class="summary">The one thing Claude does better than any other AI.</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://www.reddit.com/r/ClaudeAI/comments/1rlu0vf/going_from_pro_to_max_20x_holyy/" target="_blank" rel="noopener">Going from Pro to Max 20x .. HOLYY</a>
-        <span class="source">r/ClaudeAI</span>
-        
-        <p class="summary">Going from Pro to Max 20x .. HOLYY.</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxNck42UDhRejh2X1d3TXRrbkJzYVBzRnFOMTgtWnV6bGU2N2lpbzRrUThYUjJwN09LblJodGI0TVJ3dEJOSkdLQmVHelVLa0ZvMTc2eUJESzZNcnVFZmF5d21QaGFVLWk2ZWlOSVIzRE9XeEZPR1FGS1lwTjBCMWFadEw4M3hZX3A0UXVyS3gtLTl4TExueDBFQ2o3OVJFNUZf?oc=5" target="_blank" rel="noopener">A Claude Catharsis: Accepting When Your Life’s Work Becomes Free and Abundant - The Information</a>
-        <span class="source">Google News</span>
-        
-        <p class="summary">A Claude Catharsis: Accepting When Your Life’s Work Becomes Free.</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxOem1tM1pHRzU2UUk2RUJyUVFZcU1tT3lxQkxkNE5pU0h2QUgtTVlVTkdhRGdvVW4wLWdqczFINGNkUEE2MWVLVlotb1NQd09qWHhFUkdNNHVDV2dVblFtQXBKWUlpSy00ZmxCRUU3azdJTHNyd2FER1hRRHVFVndxVnpESW1UajZfSEw2MlJ0b0xZbnduLVpzZ1R3?oc=5" target="_blank" rel="noopener">Claude AI: Why are there so many internet outages? - New Scientist</a>
-        <span class="source">Google News</span>
-        
-        <p class="summary">Claude AI: Why are there so many internet outages?</p>
-        
-      </li>
-    
-    </ul>
+        <span class="card-source">BTC Guru (Local)</span>
+      </a>
+      
+    </div>
   </section>
   
-  <section>
-    <h2>AI Tools &amp; APIs</h2>
-    <ul>
+
+  
+  <!-- Market Analysis -->
+  <div class="analysis-card">
+    <span class="section-pill">Market Analysis &amp; 24h Outlook</span>
+    <div class="analysis-body"><p><strong>Crypto Market: Sentiment &amp; 24h Outlook</strong> BTC is at <strong>$69,955.78 (-3.7%)</strong> with <strong>$1,616M</strong> spot volume, ETH <strong>$2,045.22 (-3.8%)</strong> on <strong>$816M</strong>, and SOL <strong>$86.49 (-5.4%)</strong> on <strong>$289M</strong>—still a de-risking tape with equities weak (<strong>S&amp;P -0.9%</strong>) and volatility sticky (<strong>VIX 22.6</strong>). Even so, BTC Guru’s ensemble is <strong>0.0932</strong> in a <strong>BREAKOUT</strong> regime with momentum hot (RSI <strong>71.4/67.3</strong> on 1h/4h; MACD hist <strong>299.3</strong>), and a <strong>BULLISH (32% conf)</strong> path to <strong>$72,179</strong> if <strong>$70K</strong> reclaims cleanly. Positioning isn’t frothy (funding <strong>0.00007899</strong>; long/short <strong>0.9327</strong>), which fits the <strong>Fear &amp; Greed 18/100 (Extreme Fear)</strong> setup: panicky sentiment with room for a squeeze, but the <strong>1D trend still bearish</strong>, so upside is likely choppy. Pulse Trader is sidelined (<strong>0 open</strong>, last 24h <strong>4W/5L</strong>, <strong>P&amp;L +0.00%</strong>), which matches a market where breakouts keep failing on rate-hike chatter and Middle East risk headlines. My 24h call: <strong>neutral-to-slightly bullish</strong> for BTC/ETH (squeeze potential), but <strong>alts stay fragile</strong>—watch <strong>SOL</strong> for capitulation/reclaim, <strong>BNB $638 (-2.9%)</strong> for relative-strength leadership, and <strong>XRP $1.39</strong> as the <strong>$1.40</strong> defense line for risk appetite.</p>
+<p><strong>Gold &amp; Quant Trading</strong> Gold is back bid at <strong>$5,202.70 (+1.9%)</strong>, tracking a classic risk-off bid as markets weigh hotter-for-longer Fed odds plus geopolitics. The next 24 hours look <strong>bullish-to-neutral</strong>: if rate-hike expectations firm, gold can chop; if risk assets wobble again, gold likely grinds higher on hedging demand. On the quant side, the tone is tightening and institutionalizing—China’s push to refine <strong>high-frequency quant</strong> oversight and Europe’s <strong>MiFID II/ESMA</strong> algo-trading supervisory guidance both point to more compliance-driven execution constraints, which tends to favor larger, better-instrumented systematic desks. Separately, continued benchmarking/infra advances (e.g., <strong>STAC-style</strong> performance races) reinforce the edge going to low-latency, well-governed execution stacks—supportive for gold trend-following systems if vol stays elevated.</p></div>
+  </div>
+  
+
+  
+  <!-- Section: What&#39;s New in Claude -->
+  <section class="news-section">
+    <div class="section-header">
+      <span class="section-pill" style="background:#7c3aed;">What&#39;s New in Claude</span>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE5vcDI4MU1MSHFzME9mSXo3aG02am9ELUJKWFFrc1lucllaN3BwdXV0ZG9pZzBCSF9RN1hmR2tQZDZ3Z3JjclU1NUZoX05KNUhRTWRqMllxcDZZZ2VlcFFxc3RJVGNxTzM1b2xGcWl3Q1ZrQmYxUXhkaHNJUzdrUQ?oc=5" target="_blank" rel="noopener">We Tested All the AI Video Generators So You Don&#39;t Have To. These Are the Best - CNET</a>
-        <span class="source">Google News</span>
+    <div class="article-row">
+      <span class="badge badge-medium">8</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.wsj.com/politics/national-security/pentagon-formally-labels-anthropic-supply-chain-risk-escalating-conflict-ebdf0523" target="_blank" rel="noopener">Pentagon Labels Anthropic a Supply-Chain Risk: What It Means</a>
+          <span class="read-time">1m</span>
+        </div>
         
-        <p class="summary">We Tested All the AI Video Generators So You Don&#39;t Have To.</p>
+        <p class="summary">Impacts Anthropic&#39;s government contracts and raises concerns about AI supply chain security.</p>
         
-      </li>
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPekdKZlJvamZqRWpBcnZVYWdUQVF4NU5QcGxjOThIbjIxNFVwNVI3TkFfdmZ5Y2Mta1BHZlI0aGFyVXB2M1JxemNEZTE0Ukt2ekJpb09OR0g3bVBIaUlFdklLZXFMdjUyUHNSQUlNTk9ObjRHbnh6SVZfY3J2VEZXOVM1aG8tbjZRd0U0MzVNZ2d6amlO?oc=5" target="_blank" rel="noopener">New AI Video Generator Is So Impressive That It’s Scaring Hollywood - Futurism</a>
-        <span class="source">Google News</span>
+    <div class="article-row">
+      <span class="badge badge-medium">8</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://techcrunch.com/2026/03/03/claude-code-rolls-out-a-voice-mode-capability/" target="_blank" rel="noopener">Claude Code Adds Voice Mode: New Ways to Interact with AI</a>
+          <span class="read-time">1m</span>
+        </div>
         
-        <p class="summary">New AI Video Generator Is So Impressive That It’s Scaring Hollywood.</p>
+        <p class="summary">Voice interaction enhances accessibility and expands use cases for Claude Code.</p>
         
-      </li>
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNQnA5bGt5WF93VTM0Q09mUE5pbl9TVWxpZFN0OHJGU2RiV1M5d2RCY181Y2ZqaXJDUmxsTjhkRHllajA5WnpFWlNfVjNHUGpWNE0yMmI1WlFsWUVoeURCZjdDQjVobTYxZXpTV0VFWEVfRVNxOW9OeXVINXI4QWVTUHQ5ZWIyRW82UFN2akdKVVBIUl9pRHlXQlRGM1c?oc=5" target="_blank" rel="noopener">How AI Tools Are Revolutionizing Video Production: From Concept to Final Cut - The AI Journal</a>
-        <span class="source">Google News</span>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://techcrunch.com/2026/03/04/anthropic-ceo-dario-amodei-calls-openais-messaging-around-military-deal-straight-up-lies-report-says/" target="_blank" rel="noopener">Anthropic CEO: OpenAI&#39;s Military Deal Messaging Is &#39;Straight Up Lies&#39;</a>
+          <span class="read-time">1m</span>
+        </div>
         
-        <p class="summary">How AI Tools Are Revolutionizing Video Production: From Concept to Final Cut.</p>
+        <p class="summary">Dario Amodei disputes OpenAI&#39;s claims about military AI development, raising ethical questions.</p>
         
-      </li>
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://www.reddit.com/r/ClaudeAI/comments/1rlp4nm/chatgpt_54_vs_claude_opus_46/" target="_blank" rel="noopener">Chatgpt 5.4 vs claude opus 4.6</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://sderosiaux.substack.com/p/claude-code-told-me-what-tools-it" target="_blank" rel="noopener">Claude Code Reveals the Tools It Needs to Work Faster</a>
+          <span class="read-time">1m</span>
+        </div>
+        
+        <p class="summary">Insights into Claude&#39;s self-improvement strategies and developer tool preferences.</p>
+        
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.reddit.com/r/ClaudeAI/comments/1rmc6cb/claude_just_fixed_its_most_annoying_developer/" target="_blank" rel="noopener">Claude Just Fixed Its Most Annoying Developer Problem!</a>
+          <span class="read-time">1m</span>
+        </div>
+        
+        <p class="summary">Addresses a key pain point for developers, improving workflow and productivity.</p>
+        
         <span class="source">r/ClaudeAI</span>
-        
-        <p class="summary">Chatgpt 5.4 vs claude opus 4.6 comparison.</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPMFRRWVNuNkl3azNCLVUzVkpzQU82ZU1NSmg3dnpad1lFcGk2cXBQblo5M0tHSTU0dW50VDk1eWIwbHJkM1B4U3Y0RU9xUUFNenlmZGNGaHREYkpSTGRKdHdrNmJCbHJ5WTlxRVQ0UUluRUpXM2FqU2RxT2wwUkJMOWRpQ3hHOTlDN290ZHQ3bXh2cGZKWDF6cWx3WWM?oc=5" target="_blank" rel="noopener">YouTube Creator Sues AI Video Generator Over Video Scraping - Bloomberg Law News</a>
-        <span class="source">Google News</span>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.reddit.com/r/ClaudeAI/comments/1rls9rh/pentagon_formally_labels_anthropic_supplychain/" target="_blank" rel="noopener">Pentagon Formally Labels Anthropic Supply-Chain Risk: Implications</a>
+          <span class="read-time">1m</span>
+        </div>
         
-        <p class="summary">YouTube Creator Sues AI Video Generator Over Video Scraping.</p>
+        <p class="summary">Details the Pentagon&#39;s decision and its potential ramifications for Anthropic.</p>
         
-      </li>
+        <span class="source">r/ClaudeAI</span>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxONGZYU1pWVG9EUFlHOTNvaE50dzlEbmJxZTdpekh6S0pCQk9iWWQ1WmRIRW5EaEhqVEhRMzJ0bmtKaW1KbUZJM2JOVjNtQlF6a3FlZ1JIclB2LVpRQnhpeUhoTXlSX25ra3pLeEZRcTVWclVVWnRoSU11azA1dkV5TFZwMDZNUDRONzhmRU01MnZnbExScUNkNjBnN2RMTjd4eHdN?oc=5" target="_blank" rel="noopener">Hollywood groups condemn ByteDance&#39;s AI video generator, claiming copyright infringement - AP News</a>
-        <span class="source">Google News</span>
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://techcrunch.com/2026/03/04/jensen-huang-says-nvidia-is-pulling-back-from-openai-and-anthropic-but-his-explanation-raises-more-questions-than-it-answers/" target="_blank" rel="noopener">Jensen Huang: Nvidia Pulling Back from OpenAI and Anthropic?</a>
+          <span class="read-time">1m</span>
+        </div>
         
-        <p class="summary">Hollywood groups condemn ByteDance&#39;s AI video generator, claiming copyright infringement.</p>
+        <p class="summary">Nvidia potentially reducing collaboration, impacting AI model development and hardware optimization.</p>
         
-      </li>
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
     
-    </ul>
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.ft.com/content/97bda2ef-fc06-40b3-a867-f61a711b148b" target="_blank" rel="noopener">Anthropic Chief Back in Talks with Pentagon About AI Deal</a>
+          <span class="read-time">1m</span>
+        </div>
+        
+        <p class="summary">Negotiations resume, potentially shaping the future of AI in defense applications.</p>
+        
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.ycombinator.com/item?id=47244173" target="_blank" rel="noopener">Claude Max Granted for Open Source Project: A Boost for AI Dev</a>
+          <span class="read-time">1m</span>
+        </div>
+        
+        <p class="summary">Access to Claude Max empowers open-source AI development and innovation.</p>
+        
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.reddit.com/r/ClaudeAI/comments/1rlx0eq/privacy_just_a_reminder_to_turn_off_help_improve/" target="_blank" rel="noopener">Privacy Reminder: Disable &#39;Help Improve Claude&#39; for Data Security</a>
+          <span class="read-time">1m</span>
+        </div>
+        
+        <p class="summary">Control your data usage and protect your privacy within Claude&#39;s platform.</p>
+        
+        <span class="source">r/ClaudeAI</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">5</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://blog.mozilla.org/en/firefox/hardening-firefox-anthropic-red-team/" target="_blank" rel="noopener">Hardening Firefox: Anthropic&#39;s Red Team Joins the Fight</a>
+          <span class="read-time">1m</span>
+        </div>
+        
+        <p class="summary">Anthropic&#39;s security expertise contributes to improving Firefox&#39;s security posture.</p>
+        
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">5</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.wionews.com/world/-no-dictator-style-praise-anthropic-ceo-says-us-govt-hostility-linked-to-trump-donations-slams-openai-s-altman-in-internal-memo-report-1772698855018" target="_blank" rel="noopener">Anthropic CEO Claims US Govt Hostility Linked to Trump Donations?</a>
+          <span class="read-time">1m</span>
+        </div>
+        
+        <p class="summary">Leaked memo suggests political influence affecting government relations with Anthropic.</p>
+        
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">5</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.reddit.com/r/ClaudeAI/comments/1rlzchv/a_statement_from_anthropic_ceo_dario_amodei/" target="_blank" rel="noopener">Statement from Anthropic CEO Dario Amodei: Key Updates</a>
+          <span class="read-time">1m</span>
+        </div>
+        
+        <p class="summary">Official communication from Anthropic leadership, providing insights and direction.</p>
+        
+        <span class="source">r/ClaudeAI</span>
+      </div>
+    </div>
+    
   </section>
   
-  <section>
-    <h2>Crypto Market &amp; Sentiment</h2>
-    <ul>
+  <!-- Section: Fresh MCPs, Plugins &amp; Skills -->
+  <section class="news-section">
+    <div class="section-header">
+      <span class="section-pill" style="background:#6366f1;">Fresh MCPs, Plugins &amp; Skills</span>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOVlppNkxJRTZOMmN3QjFhVHFBVTNnNmMtdVZsWFBPUms2aHQ2TmpUVVRjdUdZUVBlRFctUXhRekU0UVNBRS1PWTFHeF84Nk9MbnRaRnVrMVRZOTF4anhoMmduX3FTUDgzbGlYSnJHcTV4Snp1aHotdVRNZ1VxTFFIY3BzckRCOFlHTGc5NUlOT2FIaTRtdlJic25NbEhLMTFqSVZsYkRmTzlnQWNmQUlSLXVB?oc=5" target="_blank" rel="noopener">Bitcoin holds breakout gains while crypto market turns cautious: Crypto Markets Today - CoinDesk</a>
-        <span class="source">Crypto News</span>
+    <div class="article-row">
+      <span class="badge badge-high">9</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://mksg.lu/blog/context-mode" target="_blank" rel="noopener">MCP Server Reduces Claude Code Context Consumption by 98%!</a>
+          <span class="read-time">1m</span>
+        </div>
         
-        <p class="summary">Bitcoin holds breakout gains while crypto market turns cautious: Crypto Markets </p>
+        <p class="summary">Significantly reduces Claude&#39;s context window usage, enabling larger, more complex code projects.</p>
         
-      </li>
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxORzhTRjVVMkRPeVIzQ2RGZk5lUUl3by1qa3B0TzN4TnNRSmdyQ0tFSVhjcjc3TDYxa253aVozaHY0NEIxRldjTklkSTcxYTRIdV9TQTN4anFiei1QX2YwY01LTXRxQVl6aDA5Y211U3lvRTNKWFROZ2RiQWR2cXo4b1gxanlmWUdiYXB5LXUxX0Qtelpwanh6c1JB0gGfAUFVX3lxTFBKUmx6am1kcU5uYnBnYTY5Wmc1U2xvQnNSOVlWT3V3TXgxZEI1a054ZU5RaTk2RFN2XzF2ODd2czFRYm05bkRrOGxlZ2MzRFhMN0JfclJ1bHd2UklDdmItMlg4MGdoUWxQRFlEcktJWTE4amlFay1ZNUxSaVNzSE1JT3FSNmUtZ0tOQTJaNVYwbEtQdmdMVEVqeV9jRjNEOA?oc=5" target="_blank" rel="noopener">Bitcoin, Ethereum and XRP Rally: Why is Crypto Market Going Up Today? - Coinpedia</a>
-        <span class="source">Crypto News</span>
+    <div class="article-row">
+      <span class="badge badge-high">9</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://github.com/mksglu/claude-context-mode" target="_blank" rel="noopener">Context Mode: Reduce Claude Code MCP Output from 315KB to 5.4KB!</a>
+          <span class="read-time">1m</span>
+        </div>
         
-        <p class="summary">Bitcoin, Ethereum and XRP Rally: Why is Crypto Market Going Up Today? - Coinpedi</p>
+        <p class="summary">Dramatically reduces MCP output size, improving Claude&#39;s efficiency and speed.</p>
         
-      </li>
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNeG1iS1dWTnpfc05IM3lrQUNjZGw3SU55QmV6NFE1VmRvUnc5enk4V21FSFF4a1VvVktUT3Z4M2hOVGx2cDF5d1lKelBRbGRQaFlTbFNjY2tPSEptZlZfa2JBWUNnSWMySTc0MUE0MFpMTDljR09FTGNTdkd2eDhjNW9lTVBVdElVLWpQcFVjSTBIMF80bml6bXB1STRhS29pdG1lYTJGZFM?oc=5" target="_blank" rel="noopener">Bitcoin price news: BTC rally comes under pressure Thursday - CoinDesk</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">Bitcoin price news: BTC rally comes under pressure Thursday - CoinDesk</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxQSEhGdnA0RXNKeHE1Q2lFc2poZDlyUzJ5WWpmMDN6U1p3WkVLaWJRMU5sN1BiN0JFNVY1cjdFTWZ3dmJUR0FhV05IaXVGRExNTFBweUdkZXpUYUZvcEhnSDM5R1UzamE5ZTJaY3ZyNzQxbEk0NXVTRW1nVnMtd1U4VnVpU1ZlTHlrTVc5LXlLVzYwcjVYSE9DQk9DbGF2V3Q2N1JodUFURXVfUnZUdW9tNFh5dGVjZlVwc0lwWG96dk5OQUdjakM1X0pzLW9HWXJmVDN2OXB1RzJqczhoOXVlNDk4MmlTV0FsOGYzMVZ3?oc=5" target="_blank" rel="noopener">Crypto market analysis: New bull market may be about to begin, says Owen Lau - CoinDesk</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">Crypto market analysis: New bull market may be about to begin, says Owen Lau - C</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxOTldLbXMxMnE3MHFzbzJobnp5X3BTTnRPaDZpb0FHNGRvNi0taFF4cEN0elYtV09WRUFfN3lYWTl5Qkhzay1vUGZnMF9IaHZuVWNXeXpadW8zZmxzTEszZzhwOGJJNVNjUjRVU3c3VW5veU9ENDREbzluRFJNVE5PeVNqcGg3akVpT0Rmalo4MHc4ek0xXzFqaHM4aEZEbG53YWZ1b2ZuVV9CNlg1ZThKMm5TOWdicDlwdV8wTVFR?oc=5" target="_blank" rel="noopener">Crypto stocks news: COIN, MSTR lead gains as bitcoin (BTC) climbs above $70,000 - CoinDesk</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">Crypto stocks news: COIN, MSTR lead gains as bitcoin (BTC) climbs above $70,000 </p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxPYkJuZG1Mc1Z5dXB6N2xOM3VjRG5vNS1XcEZzZktiME9vY0Y3bW5XNURSeDRWdDBhdkltOEp2ODU0Y01KejJLcThUS0pRbUFlMEhTTi1JTTBidy12eElzS3pOU3JKNGd3UEo1ejk4bnY5Xzlhek1wTVFPbGZPdDRUUzJwRklIZWpjUVNXM2pfZG1hVkxTUHU3SEJmRXZId1ZPSWxJ?oc=5" target="_blank" rel="noopener">What Will Bitcoin, ETH and XRP Be Worth in 2030? ChatGPT’s Price Predictions May Shock You - CCN.com</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">What Will Bitcoin, ETH and XRP Be Worth in 2030? ChatGPT’s Price Predictions May</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxOYzd3UnZ5R3o2eThBMjhHUGIwcm9Fc0pvNWNSVzBfT1dMVk8wY2hCaEVjVk5Zb3VHakFnRU9TMUJQM3kxckRrOFZkcDVlV1Y1THhjejRsS004U0JBaXBPbVlOay1YdXF3Zk9TanVEMEkwUXNFYTdMa20ydjEyUlhnX0h0VGZjV3ZWNVFNcVRCeVhsaFhHLURQQXFwZElnb2JTVjRWWjFRT2dTaW12UExB?oc=5" target="_blank" rel="noopener">Bitcoin Price Prediction: What’s the Most Likely Scenario for BTC After Reclaiming $70K - CryptoPotato</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">Bitcoin Price Prediction: What’s the Most Likely Scenario for BTC After Reclaimi</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxPX0F0X3BFUzZ1TlJnU0tOajBLNjFPQnpFUGlkbTJXRWRUb2syazJPYVBINHFTaVdnWldkcUtXNXZWTEs0ZXhiOElkOGlJZHFYRndRbHIxOFpZa3lWOEt6Y0pKa09ONDEyZWVDZ2dSZjAwMXNLZkFBTmxFZnJhTjIySlpBVC1RcE9tbnQ0Z3ZCZG1tX3dyTU1vLUxlUWgteGc1MDdHTTJnWEh4cFQzWkQxcGpOajdLMmR1NHFhd1RTZ29kMmNYa0NnU3NyVnJpVXhr0gHWAUFVX3lxTE9nazQyZDhfU2RmSlZmb1hEQTB4Y0JPTkNCNkxDLThMZUx0bXlNVjJZR2c2dmVidWVMOUZDY3hmNXVWNXRILVhqbE1iczVBRC1IZm42X1dfdEJSb2ZRZzI4SUZIVEsxNW0zRTV2d0lHSEwybWZIR3I4MUY0ZFkwV0IwSWxjYVBOS2xJMi1Id19YRFRtQnh4dHhGd25KRHdkMlFnNmM0UFVpR2QySmptdnYzZl9ZVVdYT195TFFETU9lUXlQWHJJR0g1NFdrWDFZeUxMRWhlcWc?oc=5" target="_blank" rel="noopener">Why Is Bitcoin Surging? BTC Price Tests $72K but Price Prediction Still Suggests 30% Drop to $50K - Finance Magnates</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">Why Is Bitcoin Surging? BTC Price Tests $72K but Price Prediction Still Suggests</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxQckdmbm53UW9UdnVfV0hOa3dLOUxtVWdEbjAzOVpaX1dvRmJVaXV6aVpoOXEydHNKUG5BQ0xyTkhncWs5b1dYbnpnY0d0V01FUzRsVWJxVlpJT2lwTHIwSXVWVkJnSFZETkVqZ3RmeVVZRl93cy14Y3pfTVNsSUtnTXJXYUtnSHo1dHFMS1cyRUlXaExfQk5McFI0cVpMeGt1UnhGbkxTemxlRTd6Ukw1NjJ4QWNSNm5kRGYwcFVORUh4SlFYMlhaWVdBcWIzdWx2b3NyOHFGU0M4cTNpYUE?oc=5" target="_blank" rel="noopener">‘The Big One Is Coming Soon’—Serious Trump Warning Fuels A Massive Bitcoin Price Prediction - Forbes</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">‘The Big One Is Coming Soon’—Serious Trump Warning Fuels A Massive Bitcoin Price</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE54UlBDaHdLdW52Q1lHVHZXU3Ria29BY1A4SENtNVg1MW95MFRoeUZGSHBLTWdJUkdkbjNkRXI0ZExRWTJVRkIzNHkxNzMtSkp6eHZZa1owY1JSQWwydl9xeGQ0aWdaY0g3aC1KZ0hyUWU1SEp2ZjlNUWdDWQ?oc=5" target="_blank" rel="noopener">Grok AI $40K Bitcoin Price Prediction: Why Analysts Say It’s Too Bearish - Yahoo Finance</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">Grok AI $40K Bitcoin Price Prediction: Why Analysts Say It’s Too Bearish - Yahoo</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1IdUtHSDczYUZOb25MOFBSRG94SWtrTTVWVnFUaWJsZGVwLV82RkEyVFNrbXZ4dF8ydWtSSXBYSFY4Rm1ZekQ2aTNNdi1sdTlrcmJTZDZnTnc2ajdGekF3MXZWMHdkQVVCNU5QT25zcmdhT0FkWlVLUg?oc=5" target="_blank" rel="noopener">SEC submits framework to White House on applying securities laws to crypto assets - The Block</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">SEC submits framework to White House on applying securities laws to crypto asset</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQMHp0ZV9UT2pFSG15a2RtaHQ5YUJNbTlfUlBLNHAzcnRScmptOHF2MFhOMm1pUGZ3Z0tRM091Wks4dllBU0U0RzBENF9yelRudnB1WkRyRi1Pc211MzBvYlNmUzQ1dkk1Zkd0N0NfQlFseGJzeWJ5bUtiQzRtR21Vc1o5QW94NldrT3JPa0dyQXRYTGR6SFEwdHY0QXlHOHJMYzQ0RmF6YjJzMnZsZlFGSk93?oc=5" target="_blank" rel="noopener">Crypto bill hits new impasse, raising doubts over its future - Reuters</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">Crypto bill hits new impasse, raising doubts over its future - Reuters</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQU09RRUEyWVVleE1XWkY5ZzJZUkpvVW1GTXJ4N0g0M3luc0h4YWVtWERqZUdtTDZHNjRmakdSMDRMaWprTkFGTnlJajJMdm02VVBRbURjOXF2dzdacUkxckJRTk81TkE1QmxMODlYNUZ6TlpHa3cxeHl0cFA2Nl8xa1VtRXBqS3hZRmZlbGtMeW8weVZHUElIczQ3dXJOOHY2NHc?oc=5" target="_blank" rel="noopener">US SEC Proposes Guidelines on How Securities Laws Can be Applied to Crypto - CryptoPotato</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">US SEC Proposes Guidelines on How Securities Laws Can be Applied to Crypto - Cry</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTFBLNEpsdlJVMnQ1azB6WmZLcXZkNXRoakQ1MnctRHBsaG12QURHR0RIbU5NaExuWFFKdVdiUWxWbWJhdmwxVUduSlVrMHJfa2R0aEg1eGVmeTYxMFZ2LWE2ZDdrbTNoTFRQVE5ITTBVd29BeFVsaXB0ZUtaTWHSAYIBQVVfeXFMUGlhN3FtWXFrbGVYcFlkVlFqd3p2OVloN2daNEdyTkJfdFBjOEhaX1FZbnZ3T1U1QXNBcE1jLTFBSG1iRGxBdHpHMjZQM0c2LUFtWXBXYTZNMWluRW1ObVNWM0FPdG14Z2RHY1dmbzM5blN2WWl0OHlrbXctdm8tVXVjUQ?oc=5" target="_blank" rel="noopener">Trump sides with crypto firms in trillion-dollar battle with banks over stablecoin yield - CNBC</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">Trump sides with crypto firms in trillion-dollar battle with banks over stableco</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxOY2g1U19hM0tOUkk2YWQzMzBZeWw1cXVVM0REeWh0amJlX2ZQNFFGTVBFZUtmWHloczFZUXZpSGF3S21mZzBGdkFBbmZrckRaeHRMQXZGSXVpcXhMYzFBck5sOXZoazlLTGtMano4OWRmckQtRWF3NE1ROXRWTWU2LUR2NXgtZlBiX1Y5RWxGYTludEprVUI5ZUt1cG1nMUdmU29IRDdtSkZZUHJ0?oc=5" target="_blank" rel="noopener">Russia plots stablecoin bill to capitalise on ‘colossal potential’ - dlnews.com</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">Russia plots stablecoin bill to capitalise on ‘colossal potential’ - dlnews.com</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOTG1fMXJSNXgyNlY0d1ZiZldzUkNGMEZlaE8yenJ6Q2ZQdDRxUmNEcDZuSHpvdWdQNkx0QkFTdWkycjVLV0dPbGxaLXB0N3ZLQWNiSHcwQkk5LW5JLUU2Ty1PN3RBeEJheE1Zc1A1bUR5aVdtV0MwenlEUmRPLU5FR3ZUU3N1eEljU2dFcFVZMNIBlAFBVV95cUxOSlBDWl80ZEFnMGZSWlA2U3JZRktsQWJzWk9tRHNDTXVWLTUxODVmcm9vdmMxM01IV3VwVnNWYjdWc3BhNFRYRFhTWUFkRXhYT3Q4WUIxRGVhWFI2Q0RCczE1RmlzX1YwNkdRMlBrc3NsM0k2SEY5WTJoaDdOckItSmhVQ2Zjc2swSVpxSFpOaTYzTDYy?oc=5" target="_blank" rel="noopener">Bitcoin shorts lose $272M: Could BTC recovery spark altcoin rally? - AMBCrypto</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">Bitcoin shorts lose $272M: Could BTC recovery spark altcoin rally? - AMBCrypto</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOSzdtcnVodDQ3ajJJNlRUbHVCWEl1TzJ4d1puNDZLOU01d25KMG1WTERoa2hOZVI3bGJ6RlNvNTFtaFI2WDZCUGFNalowdlRLRDRVQVdiTkZHRW02d0YwMVIwajVucUFSYUtuQ0JXdzItMGp4dmlzYWFIU0FRQnVBaTFfUHRKTFNsNzlVNExZek5Wd3Y1eFVhVTg3dDg2YnI3Z3BUUUlwUExyd3l1T0pHeTdR?oc=5" target="_blank" rel="noopener">Altcoin Season Talk Hits Two-Year Low, Says Santiment - TradingView</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">Altcoin Season Talk Hits Two-Year Low, Says Santiment - TradingView</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1GVFVwMFNyRmZGWUl1S1V4el9OU1VFV2RpR3NXRjQ3VUhvVGtMTXJCZEwwM29BUUFaSG1FYUc2T0ZhVDBucnUwOHZzTUV0Mmk5SS1YQnlfSm42NmZDdWZJVFpyaVBkX3A3WUNVUnpJT2ZxUWZHNzNZ?oc=5" target="_blank" rel="noopener">Bitcoin Holds Steady As Ethereum, XRP, Dogecoin Lead Altcoin Rally - AOL.com</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">Bitcoin Holds Steady As Ethereum, XRP, Dogecoin Lead Altcoin Rally - AOL.com</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxQeU50cmJULTVVNURsUWRYaUJ6cjgwaVF2LUo3T1RwRVlPbzhQWGhEZXVNMXpXQXhhVTBtRXpBNHEwaUg2M2xHTlNMdzBxV2lTajNvTl9iak1zRkxCaWJnLWRkb1NvQ0tOTlBHc19fYVlOQWFMRVRDWTI0WHJqWnRvUzRjM0xBUUtmVS1mX2E2SGJJc2l5LTM4UktQRGo2aDVqVDNwSDJpSVhmajhGVWdOUy1yS3g2cUpZanB6Xzg5NWZrSEFYd1E?oc=5" target="_blank" rel="noopener">Bitcoin’s late-night spike fuels broad altcoin rally: Crypto Markets Today - CoinDesk</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">Bitcoin’s late-night spike fuels broad altcoin rally: Crypto Markets Today - Coi</p>
-        
-      </li>
-    
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPMjl4Z2tVSmlvM0xJVklXaGM1UFRaLXpIV0hnNVlNRzhraXNGOVpHSWRQOHlNSlNTR3dEUGw1R2VNVGNoNFZtdXJuX3lOejY0X0dKQXdTcVZhSWYxLXFOcC1aY2RPWjhnUEFlSkltcEh2c25QNDhyci1yM2NLOUhpMll3?oc=5" target="_blank" rel="noopener">Bitcoin Rebounds to $74K Amid Altcoin Rally - KuCoin</a>
-        <span class="source">Crypto News</span>
-        
-        <p class="summary">Bitcoin Rebounds to $74K Amid Altcoin Rally - KuCoin</p>
-        
-      </li>
-    
-    </ul>
   </section>
   
-  <section>
-    <h2>Gold &amp; Quant Trading</h2>
-    <ul>
+  <!-- Section: AI Tools That Just Dropped -->
+  <section class="news-section">
+    <div class="section-header">
+      <span class="section-pill" style="background:#2563eb;">AI Tools That Just Dropped</span>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE9yVnF0dDhKS0FPeE1zYWUwNlFIYngxOVNUYkRwVUJFcVhRQUJIVHJlMFRueDRJMXlKaU9uUTU0V0FfMkgxN2lfa2VqbEhlMnFWLTlMcHZzUTZJRGhFTTlDTWVwV3YwR3BmMzJkWXNDT3BzdjZLVHVUSjlwb1o?oc=5" target="_blank" rel="noopener">Gold Price Forecast | US–Israel Strikes, Oil Supply Concerns - Capital.com</a>
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.ycombinator.com/item?id=47232903" target="_blank" rel="noopener">Cekura: Testing and Monitoring for Voice and Chat AI Agents</a>
+          <span class="read-time">1m</span>
+        </div>
+        
+        <p class="summary">Ensuring quality and reliability of AI agents, crucial for real-world applications.</p>
+        
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">5</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://github.com/synth-inc/onit" target="_blank" rel="noopener">Onit: ChatGPT Desktop with Local Mode, Claude, and Gemini!</a>
+          <span class="read-time">1m</span>
+        </div>
+        
+        <p class="summary">Desktop app offering local AI processing and access to multiple AI models.</p>
+        
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
+    
+  </section>
+  
+  <!-- Section: World News &amp; Geopolitics -->
+  <section class="news-section">
+    <div class="section-header">
+      <span class="section-pill" style="background:#dc2626;">World News &amp; Geopolitics</span>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-muted">4</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.washingtonpost.com/technology/2026/03/04/anthropic-ai-iran-campaign/" target="_blank" rel="noopener">Anthropic&#39;s Claude AI Used in US Campaign in Iran?</a>
+          <span class="read-time">1m</span>
+        </div>
+        
+        <p class="summary">Controversial use of AI in geopolitical campaigns raises ethical and security concerns.</p>
+        
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
+    
+  </section>
+  
+  <!-- Section: Turn This Into Money -->
+  <section class="news-section">
+    <div class="section-header">
+      <span class="section-pill" style="background:#ea580c;">Turn This Into Money</span>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://newsletter.danielpaleka.com/p/you-are-going-to-get-priced-out-of" target="_blank" rel="noopener">Priced Out of AI Coding Tools by 2025? Prepare Now!</a>
+          <span class="read-time">1m</span>
+        </div>
+        
+        <p class="summary">Discusses the increasing cost of AI tools and strategies to remain competitive.</p>
+        
+        <span class="source">Hacker News</span>
+      </div>
+    </div>
+    
+  </section>
+  
+  <!-- Section: Crypto Pulse: Sentiment &amp; 24h Call -->
+  <section class="news-section">
+    <div class="section-header">
+      <span class="section-pill" style="background:#d97706;">Crypto Pulse: Sentiment &amp; 24h Call</span>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">8</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.binance.com/en/trade/BTCUSDT" target="_blank" rel="noopener">Bitcoin ($69,920.03) — -3.8% 24h</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <p class="summary">$69,920.03 (-3.8% 24h) | Vol: $1,616M</p>
+        
+        <span class="source">Binance</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">8</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.binance.com/en/trade/ETHUSDT" target="_blank" rel="noopener">Ethereum ($2,043.37) — -4.0% 24h</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <p class="summary">$2,043.37 (-4.0% 24h) | Vol: $816M</p>
+        
+        <span class="source">Binance</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">8</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.binance.com/en/trade/BNBUSDT" target="_blank" rel="noopener">BNB ($638.06) — -3.0% 24h</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <p class="summary">$638.06 (-3.0% 24h) | Vol: $72M</p>
+        
+        <span class="source">Binance</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">8</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.binance.com/en/trade/ADAUSDT" target="_blank" rel="noopener">Cardano ($0.27) — -3.4% 24h</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <p class="summary">$0.27 (-3.4% 24h) | Vol: $29M</p>
+        
+        <span class="source">Binance</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">8</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.binance.com/en/trade/XRPUSDT" target="_blank" rel="noopener">XRP ($1.39) — -3.1% 24h</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <p class="summary">$1.39 (-3.1% 24h) | Vol: $136M</p>
+        
+        <span class="source">Binance</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">8</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.binance.com/en/trade/DOGEUSDT" target="_blank" rel="noopener">Dogecoin ($0.09) — -3.1% 24h</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <p class="summary">$0.09 (-3.1% 24h) | Vol: $67M</p>
+        
+        <span class="source">Binance</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">8</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.binance.com/en/trade/SOLUSDT" target="_blank" rel="noopener">Solana ($86.44) — -5.5% 24h</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <p class="summary">$86.44 (-5.5% 24h) | Vol: $289M</p>
+        
+        <span class="source">Binance</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">8</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.binance.com/en/trade/AVAXUSDT" target="_blank" rel="noopener">Avalanche ($9.18) — -3.0% 24h</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <p class="summary">$9.18 (-3.0% 24h) | Vol: $19M</p>
+        
+        <span class="source">Binance</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-high">9</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.binance.com/en/trade/BTCUSDT" target="_blank" rel="noopener">BTC Guru: BULLISH (32% conf) — Regime: BREAKOUT</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <p class="summary">Ensemble: 0.1 | RSI 1h: 71 | F&amp;G: 10 (Extreme Fear) | Target: $72,179</p>
+        
+        <span class="source">BTC Guru (Local)</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="http://localhost:8501" target="_blank" rel="noopener">Pulse Trader: 0 open | 24h: 4W/5L | P&amp;L: +0.00%</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <p class="summary">0 open positions | 24h: 4W/5L, $+38.62 USDT</p>
+        
+        <span class="source">Pulse Trader (Local)</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">8</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://alternative.me/crypto/fear-and-greed-index/" target="_blank" rel="noopener">Fear &amp; Greed Index: 18 (Extreme Fear)</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <p class="summary">Market sentiment: 18/100 — Extreme Fear</p>
+        
+        <span class="source">Alternative.me</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxQSjNPMzMtT0FpZ28wbjNkRmlQdlA4LUcteEhsb0J5ZEhzeFE3dVpSSERBSlFocWRJX2MxTkVCZ0w2ZFVac0ppRUpqTEwtUHNkZjhNTzZXd0Fha1hFX1ZmQkVtSXJjcEpiWUhKR1Q5S000bng3NlByUkc2dV9Rc05fdlZlSzVXcF9ORUhuenMzU0xhMXNRbU1fV3JJc0c2QVFhZlM0WHFmVV85RlVJVEppQ1JGZkJnbWtCYVM0MzRZd2h5UHBTX3FLdQ?oc=5" target="_blank" rel="noopener">Bitcoin fails to sustain breakout momentum as rate hikes beckon: Crypto Markets </a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxOZEZCUC12R1FSY09FNUwtMjBlN2ZudjlWZWFqSzgwNnhxQkJIQnJ4cVpjZEFxWmZRU1VvVVFESGxjcGpyM2lBX0VlVnhwZ2lOQlhUSElLXy16QkhuM3kweDdLbzVzVUY0SlZFWHZBdHBQV0FhNEJ5dXFfRUE2bUxtSmhnVWpnUU1sc0tJ?oc=5" target="_blank" rel="noopener">XRP Price Prediction: XRP Dips but Defends $1.40 Amid Market Pullback - Eudaimon</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE9YZDNxQVZueWdpRVF6dXhPdGxNc001aHhLa1VZRGdkNnhQQVJ3SExDbVl0Mmhwc0FyWlUxX1RUMV9Qd2I5a1V1MldyQ2dpd1c3RkFEVDRGekpRb3VpUmFyMkNBc1cwMl85UGo4SGtOTnlOT2lB?oc=5" target="_blank" rel="noopener">Why is crypto market going down today? (March 6) - crypto.news</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5HNnJpT2JPT1FNVUtwZWYwN2lWR2lqZzBhX2k1YkM1Q1d4c0NaMjFCdHB1aXNoaHo2UTlQUWFObHo4V21SYnVGS2lnOElBY3d3OGFkUDZiNFFBdE4zalk4UjlHNzZKNUk?oc=5" target="_blank" rel="noopener">Current price of Bitcoin for March 5, 2026 - Fortune</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPaTVBVW5sUkV6TWR5akNLRUVmYUlKNzBwdnpMcHRtb1lSMU1VVW45NTF3RTB1NE9MYlpNNmxxV3kzRTVrQnVqM0gtRzNuNnhCd19vdVgzcmlxSFd1eW9qcjI3TW5MSndEdHprR0ZDQUlSR3duQV82ckZscHBlTW9CSEVTbjVPY2E1cmNJbHdueWNIVGJOYVYteFNqVQ?oc=5" target="_blank" rel="noopener">Learn All Crypto Topics | Phemex Blog - Phemex</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE12WGxtWnY3TU5ydlR5akxvc3Mzdlc1TEZ6Z0hRQnVFendTaU9vMTBfZ0VWU2FiUGk5RENBVDlDTk1aX3V1RkhJYjQ5dEVIYzRjSV9hOGtwaFB1bDZ2MkNVR0ZFMzdSN282ZXlEcFpnSlFqWmNWcEE?oc=5" target="_blank" rel="noopener">Bitcoin Price Prediction: Once Again BTC Loses $71.5K - Eudaimonia and Co</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE9OMmprZ2RVOEdoZTRxRGQ3TmdNZVdlRVdEc1ZiRlJhb0dBRGNReUIxczBBbldLcVlncVFGWnpzN2lDbTlOYlBZWE5HWDJsTGF4Q0xYTTJOME5WV1otclBpQU8xOTlxQm45QlkzQklIRm1COHlzc3VMRg?oc=5" target="_blank" rel="noopener">Grok AI $40K Bitcoin Price Prediction: Why Analysts Say It’s Too Bearish - AOL.c</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE12X1NCa3Q1Z1hsWm5wQjFqYkh2QkVtajBIQzVXeTVSNEJFMFRmb0RZaklXV01OaXhXQS1tSWFIbzExR3haSFRZNHFkd2lDR1pobHNJenJMeEdfU1U0?oc=5" target="_blank" rel="noopener">Bitcoin (BTC) Price Analysis – Daily Updates - CryptoPotato</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFA0eEszSEtYQnJGa3JwWTE5R2F1RnRtcXdfbXl4dTkxT2p0dUpleVdRQ3BoMUNyV1hwOEl6UGJkdlV1VkFmcmhpaWlCSUc0QVlFelNQNVZacEM?oc=5" target="_blank" rel="noopener">Bitcoin Price Prediction: Will BTC Hold $70K as Iran-Israel Tensions Rise? - Cry</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxOb1N0MUgzbE42Y1hieGp0VjBPZXlzQjhwa3hqbnB3SXo2RzFnemFDYnU5UVRSbm5TWmVEcERBYWlnaC16bHFydHFab3JoVVJBbGw0QXhZN2JVSTljbURTSXkwRUQ0X29FOUFpSFNkZUxyeXBBR2J3anI0X1JQQjU0Szh0M0pHWUxEQ1k4UzF2allGNWZlYi1yYw?oc=5" target="_blank" rel="noopener">Prediction Markets Are Pricing in Pennies for a $150,000 Bitcoin by March -- Her</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxQTkpCNFhvUHdEMHJrQ2E0ZUVwelFTRktZOVhhSWNkcVlVRDNlcnBpVFk1b2gyU1FEemFhYnlERV9vQVZXWlU5WjA0VGdIeGl6Q21ldDcxaXF0ZFd5SWtOWlJBenZJU3hyVERTdVNfZjdNRVpraDM2eGpzYUMwTENmR1hMa0tlZ0hQSnVxWW1YSldLYWRONUNkNEpkOXdGY1drUnNVS0dDR0FTc3VCQnE0R3NkWHgydnRvRTdQY25sX1NsQkpFRzFV?oc=5" target="_blank" rel="noopener">SEC and CFTC progress toward harmonized crypto regulation - Norton Rose Fulbrigh</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNdFlxYnh4bGlyUEE3N3BfUzhfaVVXM05aWlRpM2RPRGV1Y0ROZzFBZ2dzUEJQRFFwX21zRWZIdVlsbjkxZXFhZTJTREZlN3o2YlhFdmZrV24xWG9fVGg2RjdabUNWeEpfLTNfc2J3NXEyWHViTkpYT3dyRGtiYU4tVWlwR3FhOWNBYUE1bjFVbFl2R3Y2dmJJNA?oc=5" target="_blank" rel="noopener">Russia Could Beat the US to Stablecoin Rules as New Bill Advances While GENIUS A</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxQYjBiV0s1TVBMVXBUN242S3J3M2d4bFhsalhnUG5OWlA5UXBWYWZ5eFc1Um55cjc0X3pVOWZiekwtaVhmUXAxS18tTE1qRlFJZWdzc3VEQk84OTdVdlhKSXJ6TkpNUG9TWVFpQXg0cUZjQjcxYmE1ZlI4YmlLcGhEYTZ0bl9YcTl2YlNzclprcGR0Nl96VGtQcV9jTVFKbVhsQWppaXM5ek0zRjNoQTJ6RURLRFRzOTNLZWJNY0xBdFJzbDRmTE1xUGhWVlpxRUVx?oc=5" target="_blank" rel="noopener">EXCHANGES AND MARKET REGULATION—SEC’s Atkins says crypto is ‘job one’ (Mar 5, 20</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMiR0FVX3lxTE5WNXpDbkJxRlZoNC1BMGEwOHNlV3dwNk9vSm1hSkhBQm9UYmJ0NVc5Tl9idS1HckpjQWpVckJDbXJ0TU9PMDFj?oc=5" target="_blank" rel="noopener">Strike Secures Coveted New York BitLicense in Major Regulatory Breakthrough - ME</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQU09RRUEyWVVleE1XWkY5ZzJZUkpvVW1GTXJ4N0g0M3luc0h4YWVtWERqZUdtTDZHNjRmakdSMDRMaWprTkFGTnlJajJMdm02VVBRbURjOXF2dzdacUkxckJRTk81TkE1QmxMODlYNUZ6TlpHa3cxeHl0cFA2Nl8xa1VtRXBqS3hZRmZlbGtMeW8weVZHUElIczQ3dXJOOHY2NHc?oc=5" target="_blank" rel="noopener">US SEC Proposes Guidelines on How Securities Laws Can be Applied to Crypto - Cry</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxQNDdzR2ViVjF6OHFkVzhfazFOVzB3RGR4Tl9lSlV4ZzFRaWQzanB4OHA2UW1sS0hJZ3RSNm9hOUpjbnBKSENIazhFSExyQk5lSnYxRmdGUFhuTmx1TWh0MlkzRVNZUVlpcWVZbFNwWXk5MkpZYUR4eDFxYUVwQ1ozTnFUOXhINzFxZDRRV2dtZ3c5OUhSdXJFbFVBX202Vkx5QWhzVmh4N0xmOUNsV3B6Z2VQTlFCX2JxME1YTkY5bEFvMFdDMkRJ0gHMAUFVX3lxTE4tWUdERkE1Z1d5TUNTWmZ1QWRkTXdfMGNlRFBxa0NVTkc2d0NhOEoxMG93TDMwODU1WW1jVUw2VHhCcnNKQ2psa0xHRG1VRzVfVUxKT3BHakJnSGJTTnhWVTR6RXFWV2dHOEp0WjhxWWIxdFUzcVY1YkIwcWlrMHV4Y0FCTXcwdjJvQkUxcEJKR1lucXBBWEdNWmwyU0x0VWoxWjVuVzhHOW1ZU3ZYMHlueFdNTUNkVnBfTXBKSzRVcUw4N0RBU0pqWTgyWg?oc=5" target="_blank" rel="noopener">While Bitcoin and Ethereum Consolidate, This Altcoin Is Quietly Preparing for a </a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPOE1kY1BvSWJRMThueElaWDlYWDUwV3VwcEoxcVBPSGZZb2VKT0tUMFY2eGpYaFh2ZVg0YU5XdTV6MXFaM1N6TFhNWURRNGRXeU1kQkNTUUQzOE9Na1k1eE44MDZPVm4ySXJUX1AteEd1M1B3WHA0WFZpb2pudkg4WVplMWRZR1RGUVlzUXlIMjRVUmo0ZWYwRmVqVG9WYVdFbjRnLWUycl82X0JDSEdEOWx3?oc=5" target="_blank" rel="noopener">Altseason chatter collapses as dogecoin correlation hints at rebound - CoinDesk</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE4yb2kyTTFhX2ZNTUMyWUlaS1lRVnlhc0dzWnMzZk9faUxIaG5keFZRVVU4b3ZlMEctMXRRLXFzR1BxbnZIVGJZVXROazZEcFVCSE1pWnNZVGNHWGp5dXBiQnpER3VTUU9BWTFDVURZalpvZ1dtUVdUck1XZ1k?oc=5" target="_blank" rel="noopener">No one is talking about Altseason — Santiment says that could be bullish - crypt</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMiekFVX3lxTFA5cVYzTThuSW5lUHU3OG5SNGJlMDhXWEVTbGRvVUwxMmRVOFBXVXBTaHdfWi10VTAxRnFWdkFUZ2xEOEt6dXp2Z1ZWNzdqQ2JnUkQySHptM05BZldmMUgyb0kyVlN1VV84RHp3UGppbmxCQlFXTGY5YWpR0gF_QVVfeXFMTUlmbFVNb0tjQVZXbHROVGZqT0QtMHNVbnIzRlVKenhSeXJZNE84RzNzQW5yel9adndTazg5STc5NXdCTEswSFA5VFYyb3gxZDE0WmdfQ0dPWXpvUUpDZnNoRDZnOWJyWGRZdTh4cWZSRnFWR0swY09yYldhZjgzMA?oc=5" target="_blank" rel="noopener">Altcoin Plunge Sets New Low Since FTX Collapse - ForkLog</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-low">6</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxObXF0cmUwclVaYkxtckJCLVViZFFsVi12UmFpQ0hnMVhOVElzQU9YSXJCSE5lNVV1a2Q0TDNNLU1WeHdLa0JCNlctTzNYempWSENiV0VUUElPNVJpdFV2RTFlWjVTc3d1UHllZkppZ3N3eHNWd05ySV9Rb0lTbWllRUtZUFRPLVVWMlRQc0dRODN4MHY1Z0M1RXJaeFkwc0lmWDYyREczRXrSAa4BQVVfeXFMTThHRmpPUzNUU3NmeEtMVnFuenRxSU9PVkJFejZDc3BFNk0wVTVVQjlrVDhMR0ZLTzhMUVkwMHFkUGRQbUVrRXd5OFo4eG9QZS1OSDZ2cDR4Ujg1Vi1NcUdoT3cxdnMyb2VHRjFHSTNNb19UUmI3TmhGTTF1WE9KSlFwajRSa0FTRkUxX2p3Um1SRDlDck5XRzRMUjdBSml6SVdXbWVVY2VkQ0JrNWp3?oc=5" target="_blank" rel="noopener">Altcoin Season Explained: Signals, Trends &amp; Smart Strategies - ABP Live English</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">Crypto News</span>
+      </div>
+    </div>
+    
+  </section>
+  
+  <!-- Section: Gold &amp; Quant Signals -->
+  <section class="news-section">
+    <div class="section-header">
+      <span class="section-pill" style="background:#b45309;">Gold &amp; Quant Signals</span>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.coingecko.com/en/coins/pax-gold" target="_blank" rel="noopener">Gold (PAXG proxy): $5,084.57 (-0.8% 24h)</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <p class="summary">Gold ~$5,085 (-0.8% 24h)</p>
+        
+        <span class="source">CoinGecko</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE9yVnF0dDhKS0FPeE1zYWUwNlFIYngxOVNUYkRwVUJFcVhRQUJIVHJlMFRueDRJMXlKaU9uUTU0V0FfMkgxN2lfa2VqbEhlMnFWLTlMcHZzUTZJRGhFTTlDTWVwV3YwR3BmMzJkWXNDT3BzdjZLVHVUSjlwb1o?oc=5" target="_blank" rel="noopener">Gold Price Forecast | US–Israel Strikes, Oil Supply Concerns - Capital.com</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">Gold Price Forecast | US–Israel Strikes, Oil Supply Concerns - Capital.com</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxQOFFOUTIxSkgycXlCdzRZaUwzY1Z6MzljRzFRTnFGMk53d0x4SHRvMnRzTTRPTVhFX2hybzNnQU9NdzItZVAzeDE2ckdzN3FDcTYzVElmcU5qcl9IV1RpVWQ2YVM5Tm1TRzZyMnhRRHVydnJVRFJwOTNmZXA3T2p1Z3JacFZtdlg5bkRfNGo2X0xKalRXcFVUMHBkZW10b0VrZDJmLV9tTUZGS0pSb0VrUWdxdmVoa25RM2ZXSzQ1T1YyTTM1VHpvMmdEalptZDlmYUU4?oc=5" target="_blank" rel="noopener">Gold (XAUUSD) &amp; Silver Price Forecast: Iran-US Strike Chaos—Can Gold Defy a 6-Week High USD? - FXEmpire</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxOZmVJVlhjWjVrT2IyRTRUUU5RbW0zSjR6QnpoQ3ZuS1ktRjVWMnRKeUs0NzNMcURDdUpsZmtxYVVlQnVRa2NpS2k1TkJaWkdSWHVhUnpmNXBNVGdJaXBYTXRub1hudHVVOTNjQTV3eWppRlpEdlZNazdXWTM1T0REazYxS1U2a3NSckVXWmRtMUVUQjZnZ1JvRlRBc1d1NmFIbTFuV2NJQS04Z1dUQkYwMExWVVhsS19OQ000TDAtRFBEemFVdkI5TVVMZ0NYQdIB0wFBVV95cUxQeFVTcjQ1eElxeTlpS292Nkg1OGlESWEtbUpsdGRVOE5ic19DTHBBMHNkdGE4am81REF2cDVZUVRMMFJGbkdjSnlaSk1KaTdUN1J1TGlWSC1SY2xCVTJZd1ppRXRZZGJKXzhXUVJvdS1BSVVLV2pKd1FNVV9Gb3lsdHp4ODNCdVI2ZDg2dXBzUDZkRW9zdlZLUUphVU1Nckk5Z3R0UFBod19iWXZwcnNFdnpacnVxamdWVkFuMHhGUDM2YTRXc0RiUldMR2RKWXFWTUdN?oc=5" target="_blank" rel="noopener">Gold Forecast: XAU/USD awaits US Nonfarm Payrolls for a clear directional impetu</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">Gold (XAUUSD) &amp; Silver Price Forecast: Iran-US Strike Chaos—Can Gold Defy a 6-We</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMinwJBVV95cUxPNDRxYURjSTRYNjhYZzFSUUVlb3RaSWRBMk9xd255RE1xd2lIRVVZeTFsQ2t3aWliR0NfdU5xeU81ZGp1c0V4d1FXamlsa2xjZFJUSDdWeldMd3Y5STN2UU9xZ3VJUDJoYmt4bFNuUzZRSWFVUlk1X1o2VGUtdnFxZ05hVW9iMDZhcEh6NXZDOEpOWlFKOVE0NURjZllkQkpaMVIzNTFwTV9RZk84WU9USTFMMVlxb21tX3RqWWFVV0o0NTFsZXZCWW11eXZuZVh4MzVtUUVObURCcXp4Y0RNdjd2SmJ5UmFfaEVXX0MxV0JlcjNiaVo5a1hwaEJGR2VVMF9OX3lUNURlNjQzbUN6R0pmMXlPNkFRZG90RFNiSdIBpAJBVV95cUxQVGVYc2FVcDYwRW1NTXJCeVBLdTI1bnktVWZXdGJGa1BzZTRqRDlMWWNPNlpKWGdnMHQzcnc0eUpVcWJnZThYeEpiNUt1SHhIU1pqVTRsU3cwS2o3cy12Zy1PVElYNFA0cGlyVU9QRDBOZWNfOHNPUmVNdGNFNU1ET3VyQ0pQYkNsU2RYTnNUd2lZQnY3UVRFMTZwbGVtUHNWM3JVYk15TVpFTjRZMHJNc2g1eUNQdURXQ1RFX29OOGFxSGdIMG51U0Y4RUg5VXJCRXVYeWxKRVgxUGtreW9rY2RzcUlpbDVCZG1VdDR1V0FkZW9VZWZvTkZCcUw1b3R4VnJ6QzdLSHZ2dEpBeU0xUThhaC1IOHZqTFQ5VHd0clJDVldV?oc=5" target="_blank" rel="noopener">Gold price prediction today: What&#39;s the outlook for gold, silver amid Middle East tensions? - The Times of India</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMingJBVV95cUxNTWRJc1E5UlNJNG9FS3NtM2JyUGg3UE1QeTBXZ21wbFdJU1lsU3hIT2JyWnJ0UXg3eTRZMHpiZGIwZnZ6YklweFRUaVFZNFBQZkpwX1F3YTkxb3FKeTlNenVaRmNfOTVUNVhwZXJxcVZucmMwbTJmZmVndGZwQ2doSFRrdzJRZkRTeDJEZ1BxT1Zncmh5UEpzRU1wNUNuM2w5enlpYXlDYzlZVlFsQkJ5X0hYNDUtNm9yblJxM19kM3A2MEs4S3NkWkU3THY1U1dTWVBpeGVBSFg4V2Z6M2YxT2UtbHZBd1RNTUh6SllzSUk2SGxaZ0JlQmp3dU5IOEYyem1SZ0NZQzA5czZMWm1IR2daOFhwRERUX1pPUmln0gGjAkFVX3lxTFBGaThyemF4NEFEU2lMa3JaRkxmWXJMV0ZpNmg0X3RtT1hlMkM0SUxic2ppNkdKalRNMVlpcUphSWVDaHQ4b3Z4Q1BGRWpOS2I3eEo5dGtGd0VQeklHVGZ4UjBzSWhfR0FsRXotNnN2OEctZlNJLXR5ajVuaTNWMGhva3V5WDg4eUJoMlRfVF9OcXE1MzZ2bTdxa3NRTXk1YzVRWnNBTmIza3hic1NQUFpFNi01MU9EQjBBWXVDYkgxR09DLWNmUUtta2lOMk50YlA5RjR4X0czZ1B5aXVjM2Y3bWJvZDZ2S2JfS1dnQ0FDRWZpTUFKTFhtWVBjZURSZnd2dDBSb0RtUHB2eUtEWEFuSGIzWGIzUVpCdVJiNmtma1Jzdw?oc=5" target="_blank" rel="noopener">Gold price prediction amid Middle East tensions: What&#39;s the gold rate outlook fo</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">Gold price prediction today: What&#39;s the outlook for gold, silver amid Middle Eas</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPY0pHYXBBeldLOWNGS2tGOWExTHNrLTZZSElTWkFaVU5aSmJHSUQ1UzVNTEUtY0NzYnlyV1IxUmlocjZwa2g4N0dQZVU3QU9ZMkx5N2xvZk9yQVlkeEM3YVlBSzhhZzRrRUphcDIxa094RGRoNURIakdlN1ZfaFNxQVd1OGtsV0lmNjNfZExscVBJcXZNSk9wTllhVEFYdEJJNlFzRHlkWERqVWdQVkNvX3RTZ3hhS3ZZTGNFZE54QWk0S1JSaE1fNmxvTzVBQdIB0wFBVV95cUxQd25Gbl9HaHlIdk9CMDRMNmhqTE5jeHlCSExqWnlEb2g1RGxCQzJWbzc1NmNHYUtMNTJqaTZla3JzZUtLWTJKV3RiTVJMLVctNXJvcUlZQ2VpY2ZEaHRNWmJORkNrMFlmLU5YY3pwTnJGbldBdnhNdXV6UHVlak95TlZ5VXlENGV2OXFtZkRMd29FZGNwVlJrUDU5TTF3ejNvX3czS25XUHNmcXU3LXdzcnUzZ1FUYUd5U0JXSFoyMHY4YnBNZ2tyMU1yRmpFUl9XM28w?oc=5" target="_blank" rel="noopener">Gold Forecast: XAU/USD buyers stay hopeful amid Middle East war, China growth woes - FXStreet</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNaU9GNU81U1p1SmpPTmNOX3pWem16amo1UUFsUkZYbUlhYzZLazAzYVhXckR4V1RhTnBDaHdxdFRveXlXOWp6bWdua3JtNlBQQTlBU3dJS3BFdE9FMUZ0aUthOHUxdkZIazc5YVdSbjVOWnR0Q2VsQnlpT3NVM3FQMDE2QzBQQ3dQVUF0UW5yajlObTJJdzNLRHIycjdtVnFKbzRNUTRxN1ZJZmhkamREUU1vX3ppYVd1M010VUcwMW5CSHBYUXlyag?oc=5" target="_blank" rel="noopener">Gold News: Gold Price Slides as Fed Rate Expectations Shift Gold Market Outlook </a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">Gold Forecast: XAU/USD buyers stay hopeful amid Middle East war, China growth wo</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQ0cxOFpZeHQybEhrbURBeHNHWUNNbHdhWmthUEpWUFV1UVdDWWxyZWVXbDZCQzZjdXc2Z3d1YlNYWmlrVFZGT1NiOHQyVDRVQ3BzeXdBMlFhZXdBYlV5XzlyelhOdlozbGhuLXZDajJCRVVqTjZVN19MZjJPdm5ZdWpqUklsSGxYd25LV0hlWThSVG5pLVAxN0czclZRaGtKOTRVQmlZODlYWEk?oc=5" target="_blank" rel="noopener">JP Morgan raises long-term gold price forecast 15% to $4,500 an ounce - Reuters</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPY0pHYXBBeldLOWNGS2tGOWExTHNrLTZZSElTWkFaVU5aSmJHSUQ1UzVNTEUtY0NzYnlyV1IxUmlocjZwa2g4N0dQZVU3QU9ZMkx5N2xvZk9yQVlkeEM3YVlBSzhhZzRrRUphcDIxa094RGRoNURIakdlN1ZfaFNxQVd1OGtsV0lmNjNfZExscVBJcXZNSk9wTllhVEFYdEJJNlFzRHlkWERqVWdQVkNvX3RTZ3hhS3ZZTGNFZE54QWk0S1JSaE1fNmxvTzVBQdIB0wFBVV95cUxQd25Gbl9HaHlIdk9CMDRMNmhqTE5jeHlCSExqWnlEb2g1RGxCQzJWbzc1NmNHYUtMNTJqaTZla3JzZUtLWTJKV3RiTVJMLVctNXJvcUlZQ2VpY2ZEaHRNWmJORkNrMFlmLU5YY3pwTnJGbldBdnhNdXV6UHVlak95TlZ5VXlENGV2OXFtZkRMd29FZGNwVlJrUDU5TTF3ejNvX3czS25XUHNmcXU3LXdzcnUzZ1FUYUd5U0JXSFoyMHY4YnBNZ2tyMU1yRmpFUl9XM28w?oc=5" target="_blank" rel="noopener">Gold Forecast: XAU/USD buyers stay hopeful amid Middle East war, China growth wo</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">JP Morgan raises long-term gold price forecast 15% to $4,500 an ounce - Reuters</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxORVYya1hTaWVoM0puZkV0bDNvTFU2OXVNSG9NWE9WbmR5d2NCaEpDSmJGaFhMdkRzeEcxNk53cVQ5WHJfSmJSQnNLWDVXZ0xJX1VJTVFsa0twTXdGUUxkSTI1RXR1QndVbGhwZ1k3T0FRcEZJbF93OU5SSFNXMW1DbGxsVlZTenFES3RnSHBteGtIZGFJcmt3aW1mTS16cTJoSnE0RTBQYnE4M0VCemVXakxiVmI?oc=5" target="_blank" rel="noopener">Gold market analysis for March 3 - key intra-day price entry levels for active traders - KITCO</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOZ1BXeVdPR08tTmQ4MHdZMkloUzlsNjRjSE5VVmxyeVRrdDZqbDI3Tm5VVUdfYTdZM0dOYjkzVFBuMGhJUzZEM3E0RDBkc0RTUXd2VFdMdm5uenpPXzJobUNvRklvRkt0S0pfYkZ0UWRXaWRDc09MR1pBUkVDRXN2Y2FINkVmUDBlRkZHNGhzZkNyNk5LUzZrM2VUV1pVOV9N?oc=5" target="_blank" rel="noopener">Gold (XAU/USD) Price Forecast for Today, Tomorrow, Next Week, and the Next 30 Da</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">Gold market analysis for March 3 - key intra-day price entry levels for active t</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPUGw1bG5vSWZpa1pSTW9FQm9IdFc0TTdnY1BGNEhMMWJGYnNia2dPLWd3SFE1TG5kUlp6WjlRdGEtSlR0WkNGVWF0ZDlXNXB3VVlEU2trM0pYUl93cDVpOUNIQ3JNYmFFS1hZSHZfLVFoSUN6dG1rMmdrSURJSXd4RVdDUTV0QzJlbDNOQ3gxX0J0S1RteWhyY0pyV1U?oc=5" target="_blank" rel="noopener">2026 Gold Market Analysis: Price Trajectory, Volatility, and Divergent Bank Views - News and Statistics - IndexBox</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5QUWMxeWVLS3BtN0d5eDJ0YjZGal91ZFNhM3QyRnVNOFpWLXlNZE9VdzhkUEZRbjZkYUNQRlE1ZEdIRFBsRmdGcTNjUWl6cHJFQW1KbzFXd0o?oc=5" target="_blank" rel="noopener">Research - World Gold Council</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">2026 Gold Market Analysis: Price Trajectory, Volatility, and Divergent Bank View</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQbVo2dFBvYXRwdkdpVmVqUklwQlUwQktnU2pNZ1Qzb1VnZkVpSTNTWFdURndaandFZ2hoU2tXdHpQOU9jZ0NJc0lMMWVGMGE1Y2psY2pZZ1hvdXNXZEVnc3lSd2taNFRyeVNlQ2Z5S2d5V3F6UmZCNGt5WElsVl9hcTd2aDR1Y21ZSTFCdXRpcENiLWtuamtDRHdqRTlDZGx0TVJSNE9ldGNpUjFt?oc=5" target="_blank" rel="noopener">Gold Price Analysis – Gold Gets Hammered on Tuesday Morning - FXEmpire</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxORVYya1hTaWVoM0puZkV0bDNvTFU2OXVNSG9NWE9WbmR5d2NCaEpDSmJGaFhMdkRzeEcxNk53cVQ5WHJfSmJSQnNLWDVXZ0xJX1VJTVFsa0twTXdGUUxkSTI1RXR1QndVbGhwZ1k3T0FRcEZJbF93OU5SSFNXMW1DbGxsVlZTenFES3RnSHBteGtIZGFJcmt3aW1mTS16cTJoSnE0RTBQYnE4M0VCemVXakxiVmI?oc=5" target="_blank" rel="noopener">Gold market analysis for March 3 - key intra-day price entry levels for active t</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">Gold Price Analysis – Gold Gets Hammered on Tuesday Morning - FXEmpire</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMiwgJBVV95cUxQWFY3OW9nYWRSS2l5b3FaelI1eUg3R3FZOFRQd21XRjdfR2tHUmc3U1JBb2RnOGVwb0UxMDFIcW1veDdZTXBiZDBHYjczQjJraThoS2ZZZkVjM3VaV3dncUpkYkpOdDZNNHRrMHlHRDNkeVdlcllNYXdheTBhYmRGSjgxT0w0TU16cEFvT2JIVGJBSENqYVFnWEZKRFRQLXllZmhRZF9GTmxUMEQzYW81U052bjR6TGpEaVBISUhkTEhQcnNTdElUckdmUXRObGljNWVGNXJSd1QxT2J5Z3ZUQU5yRGpNb3FQQXNEY080ZjF0S0FrX3VCamdjbXBRTUtWQ0dDWUJ4cmp0VDVycFRaLUNHMXNKXzNUaVdadVRzNC1TZE1XOUlqbkFfbDd6em5hUDZfV1dUTXNPemd5UVNoU0xR0gHHAkFVX3lxTE0ydHNnOExpTjJmeExtbnc1MFVRbkpPOTVPVktJQmRSMG13YjJtM085Q1k4elNLcVBIY3hUNXdFVEtOMzNhTHlFTjd3NXRuVVYyNzVYRmV4ZUJBNUJHTXUwZHJuaUd5UEx2dzlFdGtGb1lfano4WW9rb2ZGM2VkZjZ0bkNOVzdkRy1GZ2JhZW4zZkJOSjNzdEw5NFphNnh6Tl81X1VnNEZkWEhJN2pBdWd0RHZJdnI0OHdzUnZ6djQ3YTk1V2dXOEhYaDFzUDNaSGVFX25JMzhoaVZFeVlEYWV0Y0pKUk16YkpuNHFyVE10TDhURVBQX3hQWnd2R2UzbGRZN25ENGM1alI5QWdTbGFNbTN3RnBGX0ZxTWtXbWN1Y0ZWSU5ROUI2akFveXZrcDhSTHZvYkRpQXFGeUhqUFE5akVIVl9JSQ?oc=5" target="_blank" rel="noopener">Gold price volatility explained: Why gold isn’t surging despite geopolitical tensions - key factors drivin - The Economic Times</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxNeGQtQklfVDdQYnJscFBxU19HamZ6M3lBSVBSYjlES2xfdXA5ZnlEMUc2WmFEQWxSVDg1eTNPS3RpaVFCODU3MHdxaGt6UkVncGpXdEJFQWtHRVVZVXBmZ3B0alFwQkdOcFhLVkdYbE8weW4tRndfRm4yeFFIcEJscDNEOGwyeG1KdU1Oc0JEZ1NNZjZ4ZGpYM0xDVThtVWlYZ0hydnFJQWhHVzZ1R1MtVzZ6UFpNQ3l0NnR4MU43ZHNOSVBtSFAxNHVEVnBjYy0wQURkdEpEd0o2WmJjelhrZk9n0gHuAUFVX3lxTFA3bmdsa0FPY0Nya3U2dE4tOXE5bExrQnhOT19kcjBCeXpyalNRNGtEV2VNNlYwa2FlMkI2cEZNSVNodGl6SVAtMlRHMFZncWx5alZVZkRTd2hqNFN2Rm16eVlTM3pVc2l6RWZUTHJHMXlKVUtZNDVjSUwzd042TjlLLXY1WU12ekZCYnF3OEhjNFAyakM4RkxCa1RpSXRobFROcFBteDNWbjNweDZ4S0ZsdkpVMzhCeU5yOTVoMWtmUEJCR2RIaUIzd1pQclNzQTVVUWpjY3NFNlFlMW1TSWFWOFpEQ0g0X25SaC1rOGc?oc=5" target="_blank" rel="noopener">Gold Price Short-term Outlook: XAU/USD Bulls Retreat After 23% Surge- 7% Drop Sp</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">Gold price volatility explained: Why gold isn’t surging despite geopolitical ten</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxNNmlNMWpDQVg0TnNsLXpVTjlQLUlpcTZJdVk5aG5pWTVaZk10cVJpNEczaXVJenZXcGJXSGx5OVBrVUhmY3ZYelkwT1puQ3lUTjJZSFJlTHdMYXdoeTh0VThTOHRDZHVDVTRQRlBNWGhWMDE3YU9NSDJIeHk2Nm5DSjhPNXNlODdZcWU2cU41QVhpa0hjbkQ2X3ZjV09sbVR6?oc=5" target="_blank" rel="noopener">Gold Continues to See a lot of Volatility - DailyForex</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQbVo2dFBvYXRwdkdpVmVqUklwQlUwQktnU2pNZ1Qzb1VnZkVpSTNTWFdURndaandFZ2hoU2tXdHpQOU9jZ0NJc0lMMWVGMGE1Y2psY2pZZ1hvdXNXZEVnc3lSd2taNFRyeVNlQ2Z5S2d5V3F6UmZCNGt5WElsVl9hcTd2aDR1Y21ZSTFCdXRpcENiLWtuamtDRHdqRTlDZGx0TVJSNE9ldGNpUjFt?oc=5" target="_blank" rel="noopener">Gold Price Analysis – Gold Gets Hammered on Tuesday Morning - FXEmpire</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">Gold Continues to See a lot of Volatility - DailyForex</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxQS21WLVVwQ01ybzdKWGlUUE83M3JwMm02X1NrWnE3RVREYi1scUJrblFRRDhQdlJTY3FDOFQzOXJfZTRod0lPQXlqVThGMlZwT2QxNGctN2xiYkU2LXRvM2FyMGdlWGRXN3ZjcFgzMGx2c0VTSDJPNzlGT1pLY01reUNsdmFaY1l4OVJHY1dvZTNxekFtUVpLbm1XTGMyUENLN3Fuay1ZNml2b18zeTlMRTk4U1c?oc=5" target="_blank" rel="noopener">Jim Simons: Quant King of Renaissance Technologies - Investopedia</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE16a1ZpaDg0aXY3UnJZUGpOMkFucFVpNEtfMl8ydVREWXd3QXRQQTlqSGF6MUxkLWJBbWFNdlptZ2hWMUdmWGRZMWczWFpCbFJfeDFmMG5hOVNKWmEyNzUydHV1aWJtN05sRG5yOVhhU2F3MHpFOVVpODA5LVA?oc=5" target="_blank" rel="noopener">China to deepen, refine regulation on high-frequency quantitative trading: secur</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">Jim Simons: Quant King of Renaissance Technologies - Investopedia</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxNUm03Tm9LRTV2aFBCbmZBcllLeUNwVlJRNG1SQnZKZ2dSb3FnQjlwVG9yRDJPNEQ1ejNaRmQwWms0SEJMamUyYURBQnBZdTlTdlF6RzVScm9kd0ZIcFVvX0tBQVhjNUpINlBWUEdOemdWRGdPZUlmOVMwOTQyRkpBMDUzbXBqQQ?oc=5" target="_blank" rel="noopener">STG Group joins the electronic market maker fray - Global Trading</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPY1ZYV1d0cVJqZUw4SS1xaGk5Vk9famtnaFlCY1hvd3VsTGpmMEZkZ1ZoYWhxTWxCMlYyeTFYVHB6TGNtSzNjaEFXcGctWGxEam10TFdnMzl3a190MjJBanJCRndyMFdRQk4xYkxOcVh2RXlFdmdmRFl3dk5COFUzYkd5cGpHYXVPa2JTdl9PdlJoX2RONEhrZ3hEWFJRbGNQTzlHaVcwejk?oc=5" target="_blank" rel="noopener">Watch What Can Quant Trading Strategies Teach Us About Markets? - Bloomberg</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">STG Group joins the electronic market maker fray - Global Trading</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQVjh1aFBPVHFMR1VxSjFBdWJObkNYOFl4ekJ1bUh6eUttN2RkVmsyc1drMEVSeVh5aXFpM3FzMTRFTlNJNGl1RFBKMTA3OW5lSDJfM09BdVQxZzlQVmJFZFAzdUNnRDV6OVYxSGlYNElIOVBtSE96dm9uYTY4NUtIc3piLURvVS1zMTJWMmJNYV9pTi1yS3J0VUhVT2hHUVlwM2RQTUJ4RG1zOEtaR1o4Yzk4U2VrNjZZSkMwemJfVQ?oc=5" target="_blank" rel="noopener">What Can Quant Trading Strategies Teach Us About Markets? - Bloomberg</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxNUm03Tm9LRTV2aFBCbmZBcllLeUNwVlJRNG1SQnZKZ2dSb3FnQjlwVG9yRDJPNEQ1ejNaRmQwWms0SEJMamUyYURBQnBZdTlTdlF6RzVScm9kd0ZIcFVvX0tBQVhjNUpINlBWUEdOemdWRGdPZUlmOVMwOTQyRkpBMDUzbXBqQQ?oc=5" target="_blank" rel="noopener">STG Group joins the electronic market maker fray - Global Trading</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">What Can Quant Trading Strategies Teach Us About Markets? - Bloomberg</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMihgJBVV95cUxNT3luSjRvZk5zeWhBV2hROXBMMXRXTlRhM0NXckJXM1Y2RUpydGpRdFBobXlHUTNoTmdiTHY0SFItLVVzMUtXZVhsZDJ1am1pMXdTei1PTFA2WDJSSnRXLXRLakpEMFp1ZFRnVHFnMFRHeDhBZDZiNnY1ZWtUazNyNmk2U2x2M2ItR1ZZRDQ3ZkhfRXpfVGFJN2tmMV9acEhzRl9hNkJ3V1pvUndZU1BZVHRTWFhLUTNNbGNsX2dac3VsaVN3R3NFZWdoRm8xanRtdzc0VUkwN3N2c0FXS013ZzFiOGFmc1RDZDJGSXNCNFQ0N25WQ2N1U1QxSTBhODBTS1IwMlFR?oc=5" target="_blank" rel="noopener">Supermicro, Intel and Micron Collaborate on Record-Breaking Results for the STAC-M3™ Quantitative Trading Benchmark - Supermicro</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMihgJBVV95cUxNT3luSjRvZk5zeWhBV2hROXBMMXRXTlRhM0NXckJXM1Y2RUpydGpRdFBobXlHUTNoTmdiTHY0SFItLVVzMUtXZVhsZDJ1am1pMXdTei1PTFA2WDJSSnRXLXRLakpEMFp1ZFRnVHFnMFRHeDhBZDZiNnY1ZWtUazNyNmk2U2x2M2ItR1ZZRDQ3ZkhfRXpfVGFJN2tmMV9acEhzRl9hNkJ3V1pvUndZU1BZVHRTWFhLUTNNbGNsX2dac3VsaVN3R3NFZWdoRm8xanRtdzc0VUkwN3N2c0FXS013ZzFiOGFmc1RDZDJGSXNCNFQ0N25WQ2N1U1QxSTBhODBTS1IwMlFR?oc=5" target="_blank" rel="noopener">Supermicro, Intel and Micron Collaborate on Record-Breaking Results for the STAC</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">Supermicro, Intel and Micron Collaborate on Record-Breaking Results for the STAC</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOSjFTajVyWUR5cTg5QmZsM0diQm50SnpsMlE4Q21ScWJQQ3QzVGE5NVVQQ1B3WnhiYS1DMm1KdkdwU0MtZmNydElLbjZ2d3dNVTRCRXNHOTZaN1ZKRkNtYTlablBnSVlMdDNJQklrR2xpTWRMSzJaNGt6dVdnMTFrUTVOQS0telltU3NiZDVqVjJrZWVfTUJIT0p3aExUZnpSMFJkcE1NYTEyWGVSQ3ZIbmkydWRIRE0?oc=5" target="_blank" rel="noopener">Citadel Securities staff in London are appreciated by banks and trading firms - eFinancialCareers</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOSjFTajVyWUR5cTg5QmZsM0diQm50SnpsMlE4Q21ScWJQQ3QzVGE5NVVQQ1B3WnhiYS1DMm1KdkdwU0MtZmNydElLbjZ2d3dNVTRCRXNHOTZaN1ZKRkNtYTlablBnSVlMdDNJQklrR2xpTWRMSzJaNGt6dVdnMTFrUTVOQS0telltU3NiZDVqVjJrZWVfTUJIT0p3aExUZnpSMFJkcE1NYTEyWGVSQ3ZIbmkydWRIRE0?oc=5" target="_blank" rel="noopener">Citadel Securities staff in London are appreciated by banks and trading firms - </a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">Citadel Securities staff in London are appreciated by banks and trading firms - </p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE1veUlpS0tMVXBrQ0d2R3FYU0c5YkU3SWRxeUpIRkplaGtKVUxkU250VHdDdjd5RjJjOVB1U0FZWmIzT3dEazNqb2JhR2ZPQVpkVWhPc08wemFQWnhvZ0NqR3VHRdIBY0FVX3lxTE1veUlpS0tMVXBrQ0d2R3FYU0c5YkU3SWRxeUpIRkplaGtKVUxkU250VHdDdjd5RjJjOVB1U0FZWmIzT3dEazNqb2JhR2ZPQVpkVWhPc08wemFQWnhvZ0NqR3VHRQ?oc=5" target="_blank" rel="noopener">ALGO Price Analysis &amp; Algorithmic Trading Strategies Guide 2026 - Bitget</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxNS2RYTGxobDZRLUliSWpKVTNNbWNuOUdaVHBiUjBEdWRuVkZsOWE1YzVFSTJtRF9uZHVYNWxrS0o5WXhCYTFjY1hXRy1tQTJ2R1YwNUwwYjRTRzYxczEtRWRfZERGanU5cDl6ZEY2SFhUblZ6NVJrbE9CaHp3ZkpIMklhcHpSRmJSdkFfOEhrcl9aRkgyNTY4dXIxdWg0N2JBWlVManhNNmlXWmlvdVQtZWFYZkNkWmp5ZG16WlVyc3Uwc3VHSjFCcEZFbjJBV09mb2JNbUVYVWZmQQ?oc=5" target="_blank" rel="noopener">ESMA publishes Supervisory Briefing on algorithmic trading under MiFID II: What </a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">ALGO Price Analysis &amp; Algorithmic Trading Strategies Guide 2026 - Bitget</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxNS2RYTGxobDZRLUliSWpKVTNNbWNuOUdaVHBiUjBEdWRuVkZsOWE1YzVFSTJtRF9uZHVYNWxrS0o5WXhCYTFjY1hXRy1tQTJ2R1YwNUwwYjRTRzYxczEtRWRfZERGanU5cDl6ZEY2SFhUblZ6NVJrbE9CaHp3ZkpIMklhcHpSRmJSdkFfOEhrcl9aRkgyNTY4dXIxdWg0N2JBWlVManhNNmlXWmlvdVQtZWFYZkNkWmp5ZG16WlVyc3Uwc3VHSjFCcEZFbjJBV09mb2JNbUVYVWZmQQ?oc=5" target="_blank" rel="noopener">ESMA publishes Supervisory Briefing on algorithmic trading under MiFID II: What firms need to know - www.hoganlovells.com</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE1veUlpS0tMVXBrQ0d2R3FYU0c5YkU3SWRxeUpIRkplaGtKVUxkU250VHdDdjd5RjJjOVB1U0FZWmIzT3dEazNqb2JhR2ZPQVpkVWhPc08wemFQWnhvZ0NqR3VHRdIBY0FVX3lxTE1veUlpS0tMVXBrQ0d2R3FYU0c5YkU3SWRxeUpIRkplaGtKVUxkU250VHdDdjd5RjJjOVB1U0FZWmIzT3dEazNqb2JhR2ZPQVpkVWhPc08wemFQWnhvZ0NqR3VHRQ?oc=5" target="_blank" rel="noopener">ALGO Price Analysis &amp; Algorithmic Trading Strategies Guide 2026 - bitget.com</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">ESMA publishes Supervisory Briefing on algorithmic trading under MiFID II: What </p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxNT0N5X19GYjFsMS1uVVZlTWZIcHNuUkNudHBkdDZhTWRZQm5EMnpPQkZ6dXk0TnBNcGk5R21yYjZ2NXViMzhBVWJYeVk3b3VFYk9xQzNqS1hmaVowSDBNOThJWmZrUnF6cjZaenZacUNXLW84RmJtLTV3ME9Yam9odUxYbDViaWhxd21xakxncHBPNXVRdnFOdEV2eE5jcGMxR0E?oc=5" target="_blank" rel="noopener">Analysis of a trading strategy: Buy the 10 day low | by Ayrat Murtazin | Feb, 2026 - DataDrivenInvestor</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxNT0N5X19GYjFsMS1uVVZlTWZIcHNuUkNudHBkdDZhTWRZQm5EMnpPQkZ6dXk0TnBNcGk5R21yYjZ2NXViMzhBVWJYeVk3b3VFYk9xQzNqS1hmaVowSDBNOThJWmZrUnF6cjZaenZacUNXLW84RmJtLTV3ME9Yam9odUxYbDViaWhxd21xakxncHBPNXVRdnFOdEV2eE5jcGMxR0E?oc=5" target="_blank" rel="noopener">Analysis of a trading strategy: Buy the 10 day low | by Ayrat Murtazin | Feb, 20</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">Analysis of a trading strategy: Buy the 10 day low | by Ayrat Murtazin | Feb, 20</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYUxoZkxtMXJpU2JGSXl6ZWhEczROSVh4RjkxNi1jTmRqM3hXZGlnNW1HTTJMZW8zbXUyVjBlWUl6Qm1mZDFQUXBmNzBHZVhrcVFvOEg2WEYwWGt1QVF1T1g3dUhUVHZ6VGN3SGFrbjhqUzF3NUU4NDV0Xy0zQ0oza1R5UUxJM0h0TVRSVDlXQUtILW1WUm1KUm9sMl83S1E1ZlotbWg2cUd3MEVNSFYxOExvUDN6QkdrY0k3R1lsbXQ?oc=5" target="_blank" rel="noopener">&#34;Professional klydexglobal exchange supports algorithmic trading strategies.tul&#34; - Results on X | Live Posts &amp; Updates - x.com</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxOcy1OaVA5dHdwQzZrYWtpeUpUeW1EZ2VpWWRZbUVGQWdRdGUwV1Bla0xFUnpyQ2Ezb3hlVG1OekJmbF9HeFZ3LW5QTDR0bzZtajR5YjU5WnVvQWU2NG1hcTdpdEMxT1g5dFlGbkNqaGxhc2RORkNYaDhfbHdEN3hkTy1wYXEtc3k1T2FZNHBEajFYNERkd1pYTVluNFpnTm8tR0hSTVhMcWFKRTJqLWE4MGpkLUJZb2RoMzE0SnZkWV82a0JabjFKM1BFNTIxT1k0REg4WQ?oc=5" target="_blank" rel="noopener">ESMA Supervisory Briefing on Algorithmic Trading in the EU: Key Points and Pract</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">&#34;Professional klydexglobal exchange supports algorithmic trading strategies.tul&#34;</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxOcy1OaVA5dHdwQzZrYWtpeUpUeW1EZ2VpWWRZbUVGQWdRdGUwV1Bla0xFUnpyQ2Ezb3hlVG1OekJmbF9HeFZ3LW5QTDR0bzZtajR5YjU5WnVvQWU2NG1hcTdpdEMxT1g5dFlGbkNqaGxhc2RORkNYaDhfbHdEN3hkTy1wYXEtc3k1T2FZNHBEajFYNERkd1pYTVluNFpnTm8tR0hSTVhMcWFKRTJqLWE4MGpkLUJZb2RoMzE0SnZkWV82a0JabjFKM1BFNTIxT1k0REg4WQ?oc=5" target="_blank" rel="noopener">ESMA Supervisory Briefing on Algorithmic Trading in the EU: Key Points and Practical Implications - CMS LAW-NOW</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQbnoyX05qbE5BNU50d09laXktbjE0THpMNzJPdTFzR2hEZlM3Z1NybC02Mi16NGhjOVhvOUpGWE52dklzNEpWYm5jcmNZUmtPRVJQWXFUelBOSm9aZF91aXduSmtqZ2cxVG4wV0M3MTdSWUJSTnFIbTFFX0dMUmdQNXA5RFMtclpNU2YyQVV2MVpqWEpuV21NUklOOUFsa3lIWDNucTVLSXhQTFpzMHBN?oc=5" target="_blank" rel="noopener">When Algorithmic Trading Meets Allegations of Market Manipulation - FTI Consulti</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">Gold/Quant News</span>
-        
-        <p class="summary">ESMA Supervisory Briefing on Algorithmic Trading in the EU: Key Points and Pract</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://www.reddit.com/r/algotrading/comments/1rko5o1/tests_to_reduce_the_probability_your_strategy_is/" target="_blank" rel="noopener">Tests to reduce the probability your strategy is curve-fit.</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.reddit.com/r/algotrading/comments/fqc3vo/are_you_new_here_want_to_know_where_to_start/" target="_blank" rel="noopener">Are you new here? Want to know where to start? Looking for resources? START HERE</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">r/algotrading</span>
-        
-        <p class="summary">Tests to reduce the probability your strategy is curve-fit.</p>
-        
-      </li>
+      </div>
+    </div>
     
-      <li>
-        <a href="https://www.reddit.com/r/quant/comments/1rltzos/im_waiting_to_see_how_this_is_integrated/" target="_blank" rel="noopener">I&#39;m waiting to see how this is integrated</a>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.reddit.com/r/algotrading/comments/1rjmepx/weekly_discussion_thread_march_03_2026/" target="_blank" rel="noopener">Weekly Discussion Thread - March 03, 2026</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">r/algotrading</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.reddit.com/r/algotrading/comments/1rmapyc/do_you_still_reoptimize_when_the_performance_holds/" target="_blank" rel="noopener">Do you still re-optimize when the performance holds?</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">r/algotrading</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.reddit.com/r/algotrading/comments/1rmadui/the_bottleneck_of_backtesting_trade_flow/" target="_blank" rel="noopener">The bottleneck of backtesting trade flow dependent strategies</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">r/algotrading</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.reddit.com/r/algotrading/comments/1rll8cm/when_live_trading_backtest/" target="_blank" rel="noopener">When Live Trading = Backtest</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">r/algotrading</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.reddit.com/r/quant/comments/1rilyw0/weekly_megathread_education_early_career_and/" target="_blank" rel="noopener">Weekly Megathread: Education, Early Career and Hiring/Interview Advice</a>
+          <span class="read-time">2m</span>
+        </div>
+        
         <span class="source">r/quant</span>
-        
-        <p class="summary">I&#39;m waiting to see how this is integrated</p>
-        
-      </li>
+      </div>
+    </div>
     
-    </ul>
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.reddit.com/r/quant/comments/1rm9tcc/the_push_for_llms_in_execution_and_risk_pipelines/" target="_blank" rel="noopener">The push for LLMs in execution and risk pipelines is terrifying. We need constra</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">r/quant</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.reddit.com/r/quant/comments/1rm3rh3/hftshfs_not_in_nycchicagomiami/" target="_blank" rel="noopener">HFTs/HFs not in NYC/Chicago/Miami</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">r/quant</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.reddit.com/r/quant/comments/1rmdp2u/the_bottleneck_of_backtesting_trade_flow/" target="_blank" rel="noopener">The bottleneck of backtesting trade flow dependent strategies</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">r/quant</span>
+      </div>
+    </div>
+    
+    <div class="article-row">
+      <span class="badge badge-medium">7</span>
+      <div class="article-content">
+        <div class="article-title-row">
+          <a href="https://www.reddit.com/r/quant/comments/1rlotg7/factor_mimicking_multifactor_model_construction/" target="_blank" rel="noopener">Factor Mimicking / Multi-Factor Model Construction</a>
+          <span class="read-time">2m</span>
+        </div>
+        
+        <span class="source">r/quant</span>
+      </div>
+    </div>
+    
   </section>
   
 
-  <footer>
-    <p>Curated by Kimi K2.5 via OpenRouter. Sources: Hacker News, Reddit, Google News, GitHub, Dev.to, CoinGecko.</p>
+  
+  <!-- World News Analysis -->
+  <div class="special-card world-news">
+    <span class="section-pill">World News &amp; Geopolitics</span>
+    <div class="special-body"><p>On <strong>6 Mar 2026</strong>, the most market-moving tech story is the allegation that <strong>Anthropic’s Claude</strong> was used in a U.S.-linked <strong>influence/campaign operation targeting Iran</strong>, followed by the Pentagon formally labeling Anthropic a <strong>“supply-chain risk.”</strong> That’s a double hit: it tightens the narrative that frontier AI is now a <strong>national-security commodity</strong>, and it raises the probability of vendor blacklists, tighter model-access controls, and heavier due diligence for enterprises. Expect near-term pressure on AI-adjacent equities exposed to federal procurement and a bid for “sovereign” AI stacks and on-prem deployments across <strong>GCC</strong> governments that don’t want U.S. vendor entanglement.</p>
+<p>In parallel, Norton Rose Fulbright flagging <strong>SEC–CFTC convergence</strong> is quietly bullish for crypto: a clearer lane for <strong>spot market structure</strong> and custody standards should lift U.S. institutional participation and reduce tail-risk discounts on majors like <strong>BTC/ETH</strong>, even if enforcement stays aggressive.</p>
+<p>Meanwhile <strong>gold’s whipsaw</strong>—Middle East war premium vs shifting <strong>Fed rate expectations</strong>—matters for crypto positioning in <strong>UAE/MENA</strong>, where hedging flows often rotate between <strong>XAU, USD, and BTC</strong>. Trend to watch this week: whether <strong>AI security headlines</strong> accelerate bipartisan U.S. controls that spill into global tech supply chains and offshore compute hubs.</p></div>
+  </div>
+  
+
+  
+  <!-- Monetization Ideas -->
+  <div class="special-card monetization">
+    <span class="section-pill">Monetization Ideas</span>
+    <div class="special-body"><p><strong>MCP Context Shrinker + Cache (Claude Code Add‑On)</strong> Build a small <strong>MCP proxy/CLI</strong> that sits between Claude Code and your tools to automatically <strong>dedupe tool outputs, strip boilerplate, summarize long logs, and cache repeat calls</strong> so the model sees only deltas. Sell it as a paid “speed + cost” layer for teams using Claude Code on large repos, with presets for common tools (ripgrep, test runners, linters, DB queries). <strong>Effort:</strong> Medium. <strong>Revenue:</strong> $1,000–$8,000/mo (e.g., $19–$49/dev/mo + a $199 team plan). <strong>Why timely:</strong> today’s news shows MCP/context-mode can cut output from <strong>hundreds of KB to a few KB</strong> and reduce context usage by <strong>~98%</strong>, so developers are actively looking for drop-in ways to replicate that win across their own toolchains.</p>
+<p><strong>Secure Model Router for Contractors (“No Anthropic / No Cloud” Toggle)</strong> Ship a lightweight <strong>desktop/local gateway</strong> that routes coding prompts to <strong>approved providers</strong> (or local models) and enforces org rules: <strong>disable vendor telemetry</strong>, redact secrets, block certain domains/files, and produce an <strong>audit log</strong> suitable for compliance reviews. Target defense-adjacent contractors and regulated SMBs who want a single “safe” switch instead of arguing model-by-model policies. <strong>Effort:</strong> Medium–High. <strong>Revenue:</strong> $2,000–$10,000/mo (e.g., $299–$999/org/mo depending on seats and logging retention). <strong>Why timely:</strong> the Pentagon labeling Anthropic a <strong>supply-chain risk</strong> plus the broader “AI tool cost + policy volatility” narrative makes buyers urgently want <strong>provider-agnostic</strong> controls and a path to keep shipping even if a vendor gets restricted.</p>
+<p><strong>Voice-to-DevOps Copilot (Claude Voice Mode Workflows)</strong> Create a <strong>voice-first developer companion</strong> that turns spoken commands into safe, reviewable actions: “run tests,” “open a PR,” “summarize failing CI,” “create a Jira ticket from this bug,” with an approval step and auto-generated commit messages. Package it as a VS Code extension + small local agent that integrates with GitHub/GitLab, Jira/Linear, and common CI providers. <strong>Effort:</strong> Medium. <strong>Revenue:</strong> $500–$5,000/mo (e.g., $15–$30/dev/mo, plus a $99/mo “solo pro” tier). <strong>Why timely:</strong> Claude Code adding <strong>Voice Mode</strong> expands the surface area for hands-free workflows (especially debugging, code review, and incident response), and teams will pay for “voice that actually ships work” rather than novelty dictation.</p>
+<p><strong>AI Coding Cost Governor (Budgets, Token Forensics, Auto-Downgrade)</strong> Build a plug-in that tracks <strong>real token spend per repo/branch/task</strong>, flags expensive patterns (giant diffs, runaway tool output), and automatically applies <strong>context-mode rules</strong>, model switching (cheap for search/summarize, premium for final patches), and hard budgets per day. Make it compatible with multi-model setups (Claude, GPT, Gemini, and local) and export reports to Slack and CSV for managers. <strong>Effort:</strong> Low–Medium. <strong>Revenue:</strong> $1,000–$7,000/mo (e.g., $10–$25/dev/mo + $49/mo reporting add-on). <strong>Why timely:</strong> “priced out of AI coding tools by 2025” is the fear du jour, and the new MCP/context reductions provide concrete levers—your product turns those levers into <strong>automatic governance</strong> instead of manual prompt discipline.</p>
+<p><strong>Agent QA Harness for Voice + Chat (“CI for Agents”)</strong> Deliver a developer-focused alternative to enterprise platforms: a hosted service (or self-host option) that runs <strong>regression tests</strong> on chat/voice agents using scripted conversations, tool-call assertions, latency checks, and “canary” prompts for jailbreak/privacy failures. Include a simple recorder to capture real sessions (with redaction) and replay them in CI against multiple models. <strong>Effort:</strong> Medium. <strong>Revenue:</strong> $1,500–$9,000/mo (e.g., $99–$499/project/mo + usage). <strong>Why timely:</strong> with voice agents getting real adoption and news highlighting testing/monitoring for voice/chat (plus privacy reminders like disabling “Help Improve Claude”), teams need <strong>repeatable QA</strong> to prevent silent behavior drift and data leaks as they swap models/providers.</p></div>
+  </div>
+  
+
+  
+  <!-- UAE Startup Analysis -->
+  <div class="special-card uae">
+    <span class="section-pill">UAE Startup Analysis</span>
+    <div class="special-body"><p><strong>Cekura (testing and monitoring for voice/chat AI agents)</strong> builds <strong>automated QA, regression testing, and production monitoring</strong> for LLM-based agents so teams can catch hallucinations, prompt regressions, latency spikes, and unsafe outputs before customers do. This maps well to UAE/MENA because the region is rapidly deploying <strong>voice bots and WhatsApp/chat agents</strong> across <strong>banks, airlines, telcos, government services, and healthcare</strong>, where failures quickly become reputational and regulatory issues. It also needs <strong>Arabic dialect coverage (Gulf, Levantine, Egyptian)</strong>, plus domain constraints like <strong>Islamic finance phrasing</strong> (e.g., avoiding interest terminology, ensuring Sharia-compliant product explanations) and compliance with <strong>UAE PDPL</strong>, sector rules (e.g., central bank expectations for outsourcing/tech risk), and <strong>data residency</strong> expectations in regulated environments. A solo developer’s first steps: ship a thin product that plugs into popular stacks (Twilio/Genesys/WhatsApp BSPs + OpenAI/Anthropic/local models), records anonymized transcripts, runs <strong>golden test suites</strong> per intent, scores responses with <strong>LLM-as-judge plus rule-based checks</strong> (PII leakage, banned claims, policy adherence), and provides a dashboard with <strong>Arabic-specific evaluation sets</strong> and exportable audit logs for compliance teams. Regional competition you’d face includes global tooling like <strong>LangSmith, Arize, Weights &amp; Biases, Datadog</strong>, and enterprise CX vendors’ built-in analytics; locally, systems integrators and call-center platforms in the Gulf often build ad-hoc monitoring, but there’s still whitespace for a <strong>MENA-first, Arabic-eval + compliance reporting</strong> product.</p>
+<p><strong>Onit (ChatGPT desktop with Local Mode + Claude/Gemini access)</strong> is essentially a <strong>desktop AI “switchboard”</strong> that lets users run some models locally while also connecting to multiple cloud LLMs—useful for privacy, speed, and avoiding vendor lock-in. This is highly replicable for UAE/MENA because many orgs (especially <strong>government, semi-government, banks, and energy</strong>) want AI assistance but are cautious about sending sensitive data to third-party clouds; a desktop client that supports <strong>local inference</strong>, <strong>on-prem connectors</strong>, and clear <strong>data-handling controls</strong> fits procurement realities, particularly in ADGM/DIFC environments where auditability matters. A solo developer can start by building a macOS/Windows app with <strong>secure local storage</strong>, an <strong>offline mode</strong> using a compact open model, and connectors to <strong>Azure OpenAI (UAE-friendly enterprise procurement), Google, and others</strong>, plus “workspaces” that enforce policies (no external calls, redaction, retention settings). To win in the UAE you’d differentiate with <strong>Arabic UX</strong>, right-to-left handling, <strong>enterprise admin controls</strong>, and prebuilt templates for regulated workflows (e.g., customer-email drafting that avoids prohibited <strong>riba</strong> language and includes compliant disclaimers for Islamic banking). Competition is intense from <strong>Microsoft Copilot</strong>, browser-based assistants, and local ecosystem players like <strong>G42/Inception/AI71</strong> partnering with enterprises; however, many organizations still lack a single, controllable <strong>multi-model desktop layer</strong> that can be deployed with strict governance.</p>
+<p><strong>Claude Code Voice Mode (voice-driven coding/agent interaction)</strong> signals a product direction: letting developers and operators <strong>talk to coding agents</strong> hands-free, which expands accessibility and new use cases (pair-programming while reviewing code, “voice-to-patch,” or dictating infrastructure changes). In the UAE/MENA context, the adaptation isn’t just “voice for coders”; it can become a <strong>bilingual (Arabic/English) voice-to-workflow agent</strong> for IT ops, DevOps, and customer-support engineering teams—useful in organizations with mixed-language teams and strong service-level pressure (airlines, logistics free zones, large retailers). A solo developer could start with a focused tool: a VS Code extension or desktop companion that supports <strong>Arabic/English speech-to-text</strong>, turns voice commands into safe, reviewable diffs, and includes <strong>policy gates</strong> (no running destructive commands without confirmation, secrets scanning, change-approval logs). Given UAE regulatory and enterprise expectations, emphasize <strong>on-device transcription</strong> where possible, optional <strong>self-hosted STT</strong>, and audit trails for SOC/IT governance. Competition includes built-in voice dictation, GitHub Copilot-style assistants, and regional dev tooling communities; the gap is a <strong>MENA-tuned voice layer</strong> with strong <strong>Arabic dialect accuracy</strong>, enterprise controls, and integration with common Gulf enterprise setups (Azure DevOps, ServiceNow, Jira) rather than a generic “voice chat with an LLM.”</p></div>
+  </div>
+  
+
+  
+  <!-- Cost Footer -->
+  <div class="cost-footer">
+    This edition: ~$0.0355 &middot; 6 LLM calls &middot; Powered by GPT 5.2
+  </div>
+  
+
+  </div><!-- /content-area -->
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>Curated by AI &middot; Edited by Ahmed Zein</p>
+    <p>Sources: Hacker News, Reddit, Google News, GitHub, Dev.to, Binance, BTC Guru</p>
   </footer>
+
 </div>
 </body>
 </html>
