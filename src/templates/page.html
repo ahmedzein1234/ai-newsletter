@@ -97,7 +97,7 @@
           <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.editorial_title or item.title }}</a>
           <span class="read-time">{{ item.read_time }}m</span>
         </div>
-        {% if item.one_line and item.one_line != (item.editorial_title or item.title)[:80] %}
+        {% if item.one_line %}
         <p class="summary">{{ item.one_line }}</p>
         {% endif %}
         <span class="source">{{ item.source }}</span>

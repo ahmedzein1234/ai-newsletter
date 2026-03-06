@@ -138,6 +138,44 @@ async def _build_market_snapshot(client: httpx.AsyncClient) -> dict:
     return snapshot
 
 
+def _normalize_title(title: str) -> set[str]:
+    """Extract significant words from a title for fuzzy matching."""
+    import re
+    title = re.sub(r'[^\w\s]', '', title.lower())
+    stop = {'the', 'a', 'an', 'is', 'are', 'was', 'were', 'in', 'on', 'at', 'to',
+            'for', 'of', 'and', 'or', 'but', 'with', 'by', 'from', 'as', 'its',
+            'it', 'this', 'that', 'how', 'what', 'why', 'new', 'has', 'have', 'will',
+            'can', 'could', 'may', 'just', 'more', 'than', 'about', 'into', 'over'}
+    return {w for w in title.split() if w not in stop and len(w) > 2}
+
+
+def _dedup_by_title(articles: list[dict]) -> list[dict]:
+    """Remove articles covering the same story. Keep highest importance."""
+    # Sort by importance desc so we keep the best version
+    articles.sort(key=lambda a: a.get("importance", 0), reverse=True)
+    seen_titles: list[set[str]] = []
+    out: list[dict] = []
+    for a in articles:
+        words = _normalize_title(a.get("title", ""))
+        if len(words) < 3:
+            out.append(a)
+            seen_titles.append(words)
+            continue
+        # Check overlap with already-seen titles
+        is_dup = False
+        for seen in seen_titles:
+            if not seen:
+                continue
+            overlap = len(words & seen) / min(len(words), len(seen))
+            if overlap >= 0.6:
+                is_dup = True
+                break
+        if not is_dup:
+            out.append(a)
+            seen_titles.append(words)
+    return out
+
+
 async def run() -> None:
     today = date.today()
     log.info("Newsletter run for %s (dry_run=%s)", today, settings.dry_run)
@@ -160,7 +198,11 @@ async def run() -> None:
 
     log.info("Total raw articles: %d", len(all_articles))
 
-    # 2. Deduplicate
+    # 1b. Title-based fuzzy dedup (same story from multiple sources)
+    all_articles = _dedup_by_title(all_articles)
+    log.info("After title dedup: %d", len(all_articles))
+
+    # 2. Deduplicate (by sent history)
     store = dedup.load()
     store = dedup.prune(store)
     new_articles = dedup.filter_new(all_articles, store)

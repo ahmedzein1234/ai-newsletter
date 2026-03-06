@@ -1,26 +1,26 @@
 {
   "date": "2026-03-06",
-  "article_count": 81,
+  "article_count": 76,
   "section_counts": {
-    "claude_plugins": 2,
-    "claude_news": 13,
-    "monetization": 1,
-    "ai_tools": 2,
-    "world_news": 1,
+    "claude_plugins": 3,
+    "claude_news": 2,
+    "world_news": 4,
+    "ai_tools": 4,
+    "quick_links": 1,
     "crypto": 31,
     "gold_quant": 31
   },
   "top_headlines": [
-    "MCP Server Reduces Claude Code Context Consumption by 98%!",
-    "Context Mode: Reduce Claude Code MCP Output from 315KB to 5.4KB!",
+    "Claude Code Context Reduction: MCP Server Cuts Consumption by 98%",
     "BTC Guru: BULLISH (32% conf) \u2014 Regime: BREAKOUT",
-    "Pentagon Labels Anthropic a Supply-Chain Risk: What It Means",
-    "Claude Code Adds Voice Mode: New Ways to Interact with AI",
-    "Bitcoin ($69,920.03) \u2014 -3.8% 24h",
-    "Ethereum ($2,043.37) \u2014 -4.0% 24h",
-    "BNB ($638.06) \u2014 -3.0% 24h",
-    "Cardano ($0.27) \u2014 -3.4% 24h",
-    "XRP ($1.39) \u2014 -3.1% 24h"
+    "Context Mode: Shrinking MCP Output for Claude Code by 98%",
+    "Bitcoin ($69,313.61) \u2014 -4.3% 24h",
+    "Ethereum ($2,022.38) \u2014 -4.4% 24h",
+    "BNB ($634.36) \u2014 -3.4% 24h",
+    "Cardano ($0.26) \u2014 -3.8% 24h",
+    "XRP ($1.37) \u2014 -3.7% 24h",
+    "Dogecoin ($0.09) \u2014 -3.6% 24h",
+    "Solana ($85.70) \u2014 -5.5% 24h"
   ],
-  "analysis_summary": "**Crypto Market: Sentiment & 24h Outlook** BTC is at **$69,955.78 (-3.7%)** with **$1,616M** spot volume, ETH **$2,045.22 (-3.8%)** on **$816M**, and SOL **$86.49 (-5.4%)** on **$289M**\u2014still a de-risking tape with equities weak (**S&P -0.9%**) and volatility sticky (**VIX 22.6**). Even so, BTC Guru\u2019s ensemble is **0.0932** in a **BREAKOUT** regime with momentum hot (RSI **71.4/67.3** on 1h/4h; MACD hist **299.3**), and a **BULLISH (32% conf)** path to **$72,179** if **$70K** reclaims cleanly. P"
+  "analysis_summary": "**Crypto Market: Sentiment & 24h Outlook** BTC is printing **$69,329.67 (-4.3%)** on **$1.66B** spot volume, ETH **$2,022.71 (-4.4%)** on **$848M**, and SOL is the laggard at **$85.72 (-5.5%)** on **$292M**\u2014a clean risk-off tape with majors slipping under key round-number support. BTC Guru stays **BULLISH (32% conf)** with an ensemble score of **0.0932** in a **BREAKOUT** regime: **RSI 1h/4h at 71.4/67.3** and a positive MACD histogram signal short-term strength, but the **1D trend remains beari"
 }

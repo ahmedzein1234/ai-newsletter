@@ -49,13 +49,22 @@ Categorize each article into EXACTLY ONE section:
 
 Note: "crypto" and "gold_quant" articles are pre-tagged and will NOT appear here.
 
+IMPORTANT — DEDUPLICATION:
+Many articles cover the same story from different sources. If multiple articles \
+are about the same topic/event, ONLY include the BEST one (highest quality source, \
+most detail). Drop the duplicates entirely (do not include them in your output). \
+For example, if 3 articles cover "GPT-5 release", pick the one from the best \
+source and drop the other two.
+
 Rate importance 0-10. Drop anything below 4.
 Return a JSON array of objects with these fields:
 - id (string): the article id
 - section (string): one of the section keys above
 - importance (int 0-10): how relevant/important for this audience
 - editorial_title (string): catchy rewrite of the title, max 12 words
-- one_line_summary (string): why it matters for this audience, max 20 words
+- summary (string): 2-3 sentence summary explaining what happened and why it \
+matters for this audience. Be specific — include names, numbers, and key details. \
+40-60 words.
 - word_count_estimate (int): estimated word count of the full article
 
 No markdown fences. Just the raw JSON array."""
@@ -463,7 +472,8 @@ def _merge(articles: list[dict], curated: list[dict]) -> list[dict]:
             a["importance"] = c.get("importance", 5)
             a["relevance"] = a["importance"]
             a["editorial_title"] = c.get("editorial_title", a["title"][:80])
-            a["one_line"] = c.get("one_line_summary", a["title"][:80])
+            # Use new "summary" field (2-3 sentences), fall back to old "one_line_summary"
+            a["one_line"] = c.get("summary", c.get("one_line_summary", a["title"][:80]))
             wc = c.get("word_count_estimate")
             a["read_time"] = max(1, wc // 200) if wc else 2
             out.append(a)

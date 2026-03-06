@@ -137,7 +137,7 @@
     <td>
       <a href="{{ item.url }}" style="color:#1e293b;text-decoration:none;font-size:14px;font-weight:700;font-family:system-ui,-apple-system,sans-serif;">{{ item.editorial_title or item.title }}</a>
       <span style="display:inline-block;background:#f1f5f9;color:#64748b;font-size:11px;font-family:system-ui,sans-serif;padding:1px 7px;border-radius:8px;margin-left:6px;vertical-align:middle;">{{ item.read_time }}m</span>
-      {% if item.one_line and item.one_line != (item.editorial_title or item.title)[:80] %}
+      {% if item.one_line %}
       <p style="margin:3px 0 0;color:#64748b;font-size:13px;line-height:1.5;font-family:Georgia,'Times New Roman',serif;">{{ item.one_line }}</p>
       {% endif %}
       <p style="margin:2px 0 6px;color:#94a3b8;font-size:12px;font-family:system-ui,sans-serif;">{{ item.source }}</p>
